@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" role="img" aria-label="Professional services strategy dashboard illustration">
+<defs>
+ <linearGradient id="bgp" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17243b"/><stop offset="1" stop-color="#0b1222"/></linearGradient>
+ <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff7a86"/><stop offset="1" stop-color="#ff4d5e"/></linearGradient>
+ <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a99cff"/><stop offset="1" stop-color="#6579d9"/></linearGradient>
+</defs>
+<rect width="760" height="320" fill="url(#bgp)"/>
+<g opacity=".25" stroke="#5d7196" stroke-width="1"><path d="M0 64H760M0 128H760M0 192H760M0 256H760"/><path d="M95 0V320M190 0V320M285 0V320M380 0V320M475 0V320M570 0V320M665 0V320"/></g>
+<rect x="65" y="38" width="630" height="245" rx="18" fill="#111d31" stroke="#3b4e70" stroke-width="3"/>
+<rect x="88" y="60" width="584" height="34" rx="8" fill="#202f49"/>
+<circle cx="108" cy="77" r="5" fill="#ff4d5e"/><circle cx="126" cy="77" r="5" fill="#f8b65d"/><circle cx="144" cy="77" r="5" fill="#75d7c7"/>
+<rect x="92" y="112" width="210" height="145" rx="12" fill="#182840" stroke="#344a6c"/>
+<text x="112" y="139" font-family="Arial,sans-serif" font-size="13" fill="#aebbd4" letter-spacing="2">STRATEGY</text>
+<rect x="112" y="156" width="154" height="10" rx="5" fill="#536987"/><rect x="112" y="177" width="125" height="8" rx="4" fill="#344a6c"/><rect x="112" y="194" width="140" height="8" rx="4" fill="#344a6c"/>
+<rect x="112" y="218" width="82" height="22" rx="6" fill="url(#coral)"/>
+<rect x="320" y="112" width="330" height="145" rx="12" fill="#182840" stroke="#344a6c"/>
+<text x="342" y="139" font-family="Arial,sans-serif" font-size="13" fill="#aebbd4" letter-spacing="2">GROWTH PLAN</text>
+<path d="M348 224L398 203L445 211L493 173L541 185L607 149" fill="none" stroke="url(#coral)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M590 149h17v17" fill="none" stroke="#ff7a86" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#8fa5c8"><circle cx="348" cy="224" r="5"/><circle cx="398" cy="203" r="5"/><circle cx="445" cy="211" r="5"/><circle cx="493" cy="173" r="5"/><circle cx="541" cy="185" r="5"/><circle cx="607" cy="149" r="5"/></g>
+<rect x="343" y="237" width="74" height="5" rx="2.5" fill="#415777"/><rect x="427" y="237" width="74" height="5" rx="2.5" fill="#415777"/><rect x="511" y="237" width="74" height="5" rx="2.5" fill="#415777"/>
+</svg>
