@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://digicourse3.github.io/Okiro-Digital-Marketing-Agency/sitemap.xml
