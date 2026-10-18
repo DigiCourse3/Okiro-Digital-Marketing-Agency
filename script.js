@@ -1,3 +1,40 @@
+/* Send enquiries through FormSubmit and report only accepted submissions to GTM.
+   Never pass names, emails, phone numbers, or message text to Analytics. */
+window.okiroSubmitLead = async function (form, feedback, source) {
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton ? submitButton.textContent : '';
+  if (submitButton) { submitButton.disabled = true; submitButton.setAttribute('aria-busy', 'true'); }
+  if (feedback) feedback.textContent = 'Sending your enquiry…';
+  try {
+    const payload = Object.fromEntries(new FormData(form).entries());
+    payload._subject = 'New Okiro website enquiry';
+    payload._template = 'table';
+    const response = await fetch('https://formsubmit.co/ajax/hello@okiro.co.in', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json().catch(() => ({}));
+    const message = String(result.message || result.error || '');
+    const accepted = response.ok && (result.success === true || result.success === 'true');
+    if (!accepted) {
+      if (feedback) feedback.textContent = message || 'We could not send your enquiry. Please email hello@okiro.co.in directly.';
+      return false;
+    }
+    if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: 'generate_lead', form_name: source });
+    }
+    if (feedback) feedback.textContent = 'Thank you — your enquiry has been submitted successfully.';
+    form.reset();
+    return true;
+  } catch (error) {
+    if (feedback) feedback.textContent = 'We could not send your enquiry. Please check your connection or email hello@okiro.co.in directly.';
+    return false;
+  } finally {
+    if (submitButton) { submitButton.disabled = false; submitButton.removeAttribute('aria-busy'); submitButton.textContent = originalButtonText; }
+  }
+};
+
 /* Okiro navigation: desktop hover + reliable touch/mobile menu. */
 (() => {
   const menuToggle = document.querySelector('.menu-toggle');
@@ -106,19 +143,10 @@
 
   const form = document.querySelector('#contactForm');
   const feedback = document.querySelector('#formFeedback');
-  form?.addEventListener('submit', (event) => {
+  form?.addEventListener('submit', async (event) => {
     event.preventDefault();
-    const data = new FormData(form);
-    const name = String(data.get('name') || '').trim();
-    const email = String(data.get('email') || '').trim();
-    const mobile = String(data.get('mobile') || '').trim();
-    const service = String(data.get('service') || '').trim();
-    const message = String(data.get('message') || '').trim();
-    const subject = encodeURIComponent(`Project enquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nService: ${service}\n\nGoals:\n${message || 'Not provided'}`);
-    if (feedback) feedback.textContent = 'Opening your email app with the enquiry details…';
-    window.location.href = `mailto:hello@okiro.co.in?subject=${subject}&body=${body}`;
-    showToast('Your email app should open with the enquiry drafted.');
+    const sent = await window.okiroSubmitLead(form, feedback, 'contact_form');
+    if (sent) showToast('Your enquiry has been submitted successfully.');
   });
 
   function showToast(message) {
@@ -174,18 +202,13 @@
     modal.querySelector('.project-modal-close').addEventListener('click', close);
     modal.addEventListener('click', e => { if (e.target === modal) close(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
-    modal.querySelector('form').addEventListener('submit', e => {
+    modal.querySelector('form').addEventListener('submit', async e => {
       e.preventDefault();
-      const data = new FormData(e.currentTarget);
-      const name = String(data.get('name') || '').trim();
-      const email = String(data.get('email') || '').trim();
-      const mobile = String(data.get('mobile') || '').trim();
-      const service = String(data.get('service') || '').trim();
-      const message = String(data.get('message') || '').trim();
-      const subject = encodeURIComponent(`Project enquiry from ${name}`);
-      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nService: ${service}\n\nProject goals:\n${message || 'Not provided'}`);
-      modal.querySelector('.project-modal-feedback').textContent = 'Opening your email app with the enquiry details…';
-      window.location.href = `mailto:hello@okiro.co.in?subject=${subject}&body=${body}`;
+      await window.okiroSubmitLead(
+        e.currentTarget,
+        modal.querySelector('.project-modal-feedback'),
+        'project_enquiry_modal'
+      );
     });
     return modal;
   };
