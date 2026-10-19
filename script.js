@@ -21,11 +21,26 @@ window.okiroSubmitLead = async function (form, feedback, source) {
       if (feedback) feedback.textContent = message || 'We could not send your enquiry. Please email hello@okiro.co.in directly.';
       return false;
     }
-    if (window.dataLayer && Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({ event: 'generate_lead', form_name: source });
-    }
     if (feedback) feedback.textContent = 'Thank you — your enquiry has been submitted successfully.';
     form.reset();
+    // Allow GTM to process generate_lead before navigating to the thank-you page.
+    let redirected = false;
+    const goToThankYou = () => {
+      if (redirected) return;
+      redirected = true;
+      window.location.assign('thank-you.html');
+    };
+    if (window.dataLayer && Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({
+        event: 'generate_lead',
+        form_name: source,
+        eventCallback: goToThankYou,
+        eventTimeout: 1500
+      });
+      window.setTimeout(goToThankYou, 1800);
+    } else {
+      goToThankYou();
+    }
     return true;
   } catch (error) {
     if (feedback) feedback.textContent = 'We could not send your enquiry. Please check your connection or email hello@okiro.co.in directly.';
