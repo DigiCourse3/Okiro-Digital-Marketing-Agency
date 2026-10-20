@@ -1046,3 +1046,24 @@ button, .button, .nav-links a, .site-nav a { font-size: max(15px, 1rem); }
 .brand-tagline{margin:-7px 0 15px;color:#aab5cc;font-size:clamp(12px,1.2vw,15px);font-weight:700;letter-spacing:.055em;line-height:1.5}
 .brand-slogan{color:#aab5cc;font-size:12px;letter-spacing:.12em;font-weight:700}
 @media(max-width:700px){.hero h1.home-seo-title{font-size:clamp(34px,8.8vw,48px);line-height:1.08;letter-spacing:-.055em}.brand-tagline{font-size:12px;letter-spacing:.02em}}
+
+
+/* Okiro section divider: subtle blue-purple glow matching the reference design. */
+main section {
+  position: relative;
+}
+main section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #111a32 0%, #526dff 38%, #8b7cff 72%, #17152f 100%);
+  box-shadow: 0 0 9px rgba(104, 117, 255, 0.38), 0 0 22px rgba(104, 117, 255, 0.12);
+  pointer-events: none;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  main section::before { box-shadow: none; }
+}
