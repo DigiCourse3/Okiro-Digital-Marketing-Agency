@@ -1049,10 +1049,10 @@ button, .button, .nav-links a, .site-nav a { font-size: max(15px, 1rem); }
 
 
 /* Okiro section divider: brand navy-blue to orange, inspired by the logo. */
-main section {
+main > section {
   position: relative;
 }
-main section::before {
+main > section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1065,5 +1065,8 @@ main section::before {
   z-index: 1;
 }
 @media (prefers-reduced-motion: reduce) {
-  main section::before { box-shadow: none; }
+  main > section::before { box-shadow: none; }
 }
+
+/* Keep the footer separate from the glowing section dividers. */
+.site-footer { border-top: 0; }
