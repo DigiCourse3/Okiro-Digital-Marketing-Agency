@@ -1068,5 +1068,24 @@ main > section::before {
   main > section::before { box-shadow: none; }
 }
 
-/* Keep the footer separate from the glowing section dividers. */
-.site-footer { border-top: 0; }
+/* Give the footer its own full-width brand-gradient divider. */
+.site-footer {
+  position: relative;
+  border-top: 0;
+}
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 2px;
+  background: linear-gradient(90deg, #071a35 0%, #0877c9 34%, #ff9d00 70%, #071a35 100%);
+  box-shadow: 0 0 8px rgba(8, 119, 201, 0.32), 0 0 14px rgba(255, 157, 0, 0.18);
+  pointer-events: none;
+  z-index: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-footer::before { box-shadow: none; }
+}
