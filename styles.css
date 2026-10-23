@@ -1089,3 +1089,36 @@ main > section::before {
 @media (prefers-reduced-motion: reduce) {
   .site-footer::before { box-shadow: none; }
 }
+
+
+/* Mobile performance tune: reduce continuous paint/compositing work on small devices.
+   Desktop visuals remain unchanged. */
+@media (max-width: 700px) {
+  .planet,
+  .card-reach,
+  .card-convert,
+  .card-grow {
+    animation: none !important;
+  }
+  .float-card {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+  }
+  .planet {
+    box-shadow: inset -14px -18px 28px #050817, inset 7px 6px 18px #ffb0a344, 0 0 45px #b52b6b22 !important;
+  }
+  .planet-shine {
+    filter: blur(22px) !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .planet,
+  .card-reach,
+  .card-convert,
+  .card-grow,
+  .marquee-track,
+  .client-track {
+    animation: none !important;
+  }
+}
