@@ -1122,3 +1122,28 @@ main > section::before {
     animation: none !important;
   }
 }
+
+
+/* Mobile stability: keep the hero illustration's layout predictable and
+   avoid unnecessary continuous animation work on small screens. */
+@media (max-width: 700px) {
+  .hero-visual {
+    transform: none !important;
+    height: 320px !important;
+    margin: 18px 0 0 !important;
+    overflow: clip;
+  }
+  .orbit,
+  .planet,
+  .card-reach,
+  .card-convert,
+  .card-grow,
+  .marquee-track,
+  .client-track {
+    animation: none !important;
+  }
+  .float-card {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}
