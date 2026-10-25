@@ -1772,3 +1772,55 @@ main > section::before {
   .aeo-service-page .aeo-related-compact .aeo-related-grid { grid-template-columns: minmax(0, 1fr); }
   .aeo-service-page .aeo-related-compact .aeo-related-mini { padding: 17px; }
 }
+
+
+/* Compact process-step cards to match the supplied reference image. */
+.aeo-service-page .service-steps {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.aeo-service-page .service-steps article {
+  padding: 30px 31px;
+  min-height: 0;
+  border-radius: 22px;
+  border: 1px solid rgba(120, 148, 190, .24);
+  background: linear-gradient(145deg, rgba(18, 30, 49, .94), rgba(8, 15, 28, .98));
+  box-shadow: none;
+}
+.aeo-service-page .service-steps article > span {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 800;
+}
+.aeo-service-page .service-steps h3 {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: -.025em;
+}
+.aeo-service-page .service-steps p {
+  margin: 0;
+  max-width: 360px;
+  color: #b5c2d8;
+  font-size: 14px;
+  line-height: 1.9;
+}
+@media (max-width: 680px) {
+  .aeo-service-page .service-steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .aeo-service-page .service-steps article {
+    padding: 23px;
+    border-radius: 18px;
+  }
+  .aeo-service-page .service-steps h3 {
+    margin-top: 16px;
+    font-size: 18px;
+  }
+  .aeo-service-page .service-steps p {
+    font-size: 13px;
+  }
+}
