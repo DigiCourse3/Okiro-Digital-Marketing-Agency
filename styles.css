@@ -2455,3 +2455,135 @@ body.aeo-service-page .aeo-related-card:hover {
     transform: none;
   }
 }
+
+
+/* AEO responsive audit fixes: prevent overflow and override inline related-service grids. */
+body.aeo-service-page {
+  overflow-x: clip;
+}
+body.aeo-service-page *,
+body.aeo-service-page *::before,
+body.aeo-service-page *::after {
+  box-sizing: border-box;
+}
+body.aeo-service-page img,
+body.aeo-service-page svg,
+body.aeo-service-page video,
+body.aeo-service-page iframe {
+  max-width: 100%;
+}
+body.aeo-service-page .service-page,
+body.aeo-service-page .service-feature-layout,
+body.aeo-service-page .service-feature-copy,
+body.aeo-service-page .service-feature-image,
+body.aeo-service-page .subpage-section,
+body.aeo-service-page .service-process-block,
+body.aeo-service-page .subpage-grid,
+body.aeo-service-page .service-steps,
+body.aeo-service-page .aeo-faq-grid,
+body.aeo-service-page .subpage-cta {
+  min-width: 0;
+}
+body.aeo-service-page .aeo-related-services {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: clamp(16px, 4vw, 24px) !important;
+  padding-right: clamp(16px, 4vw, 24px) !important;
+}
+body.aeo-service-page .aeo-related-inner {
+  width: 100% !important;
+  max-width: 1120px !important;
+}
+body.aeo-service-page .aeo-related-heading {
+  grid-template-columns: minmax(0, 1fr) minmax(0, .8fr) !important;
+}
+body.aeo-service-page .aeo-related-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+body.aeo-service-page .aeo-related-card {
+  min-width: 0 !important;
+}
+body.aeo-service-page .aeo-related-copy,
+body.aeo-service-page .aeo-mini-copy {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+body.aeo-service-page .hero-actions,
+body.aeo-service-page .subpage-cta {
+  flex-wrap: wrap;
+}
+body.aeo-service-page .hero-actions a,
+body.aeo-service-page .subpage-cta a,
+body.aeo-service-page .subpage-cta button {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  body.aeo-service-page .service-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.aeo-service-page .service-feature-image {
+    width: 100%;
+    min-width: 0;
+  }
+  body.aeo-service-page .aeo-related-heading {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+}
+@media (max-width: 680px) {
+  body.aeo-service-page .service-page {
+    width: calc(100% - 32px) !important;
+    max-width: 560px;
+  }
+  body.aeo-service-page .service-page-hero h1 {
+    font-size: clamp(32px, 9vw, 44px);
+    overflow-wrap: anywhere;
+  }
+  body.aeo-service-page .service-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  body.aeo-service-page .service-feature-image {
+    min-height: 0;
+    height: auto;
+  }
+  body.aeo-service-page .aeo-related-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+  }
+  body.aeo-service-page .aeo-related-card {
+    padding: 18px !important;
+    min-height: 0 !important;
+  }
+  body.aeo-service-page .aeo-related-heading h2 {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+  body.aeo-service-page .subpage-cta {
+    align-items: flex-start;
+    padding: 22px;
+  }
+  body.aeo-service-page .subpage-cta a,
+  body.aeo-service-page .hero-actions a {
+    width: 100%;
+    justify-content: center;
+  }
+  body.aeo-service-page .subpage-section table th,
+  body.aeo-service-page .subpage-section table td {
+    min-width: 120px;
+  }
+}
+@media (max-width: 380px) {
+  body.aeo-service-page .service-page {
+    width: calc(100% - 24px) !important;
+  }
+  body.aeo-service-page .subpage-card,
+  body.aeo-service-page .service-steps article {
+    padding: 16px;
+  }
+  body.aeo-service-page .aeo-related-card {
+    gap: 10px !important;
+    padding: 14px !important;
+  }
+  body.aeo-service-page .aeo-mini-arrow {
+    margin-left: 0 !important;
+  }
+}
