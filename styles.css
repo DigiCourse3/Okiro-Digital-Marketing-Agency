@@ -1941,3 +1941,19 @@ main > section::before {
     padding: 17px !important;
   }
 }
+
+
+/* Final override for related-services layout and viewport-safe centering. */
+.aeo-service-page .aeo-related-services .aeo-related-inner { width: min(1120px, 100%) !important; margin-inline: auto !important; }
+.aeo-service-page .aeo-related-services .aeo-related-heading { display:grid !important; grid-template-columns:minmax(0,1fr) minmax(240px,.8fr) !important; }
+.aeo-service-page .aeo-related-services .aeo-related-grid { display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+.aeo-service-page .aeo-related-services .aeo-related-mini { display:flex !important; flex-direction:row !important; white-space:normal !important; }
+.aeo-service-page .aeo-related-services .aeo-mini-copy,
+.aeo-service-page .aeo-related-services .aeo-mini-copy strong,
+.aeo-service-page .aeo-related-services .aeo-mini-copy small { white-space:normal !important; overflow-wrap:anywhere !important; }
+@media(max-width:700px) {
+ .aeo-service-page .aeo-related-services { padding:32px 16px !important; }
+ .aeo-service-page .aeo-related-services .aeo-related-heading,
+ .aeo-service-page .aeo-related-services .aeo-related-grid { grid-template-columns:minmax(0,1fr) !important; }
+ .aeo-service-page .aeo-related-services .aeo-related-mini { padding:17px !important; }
+}
