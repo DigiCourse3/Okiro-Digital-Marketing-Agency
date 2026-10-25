@@ -1147,3 +1147,68 @@ main > section::before {
     backdrop-filter: none !important;
   }
 }
+
+
+/* AEO FAQ accordion styled to match Okiro's dark two-column reference layout. */
+.aeo-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+  align-items: start;
+}
+.aeo-faq-item {
+  min-width: 0;
+  border: 1px solid #293a56;
+  border-radius: 15px;
+  background: rgba(14, 23, 40, 0.72);
+  color: #f5f7fc;
+  overflow: hidden;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.aeo-faq-item:hover,
+.aeo-faq-item[open] {
+  border-color: #435777;
+  background: rgba(18, 29, 49, 0.96);
+}
+.aeo-faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 72px;
+  padding: 20px 23px;
+  color: #f5f7fc;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 750;
+}
+.aeo-faq-item summary::-webkit-details-marker { display: none; }
+.aeo-faq-item summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  color: #ff7f91;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 700;
+}
+.aeo-faq-item[open] summary::after { content: "−"; }
+.aeo-faq-item summary:focus-visible {
+  outline: 2px solid #ff7f91;
+  outline-offset: -4px;
+  border-radius: 12px;
+}
+.aeo-faq-answer {
+  padding: 0 23px 21px;
+  color: #c1cada;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.aeo-faq-answer p { margin: 0; }
+.aeo-faq-answer a { color: #ff9cab; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 680px) {
+  .aeo-faq-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .aeo-faq-item summary { min-height: 64px; padding: 17px 18px; font-size: 15px; }
+  .aeo-faq-answer { padding: 0 18px 18px; }
+}
