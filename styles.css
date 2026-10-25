@@ -1676,3 +1676,99 @@ main > section::before {
   .aeo-service-page .aeo-related-card:hover,
   .aeo-service-page .aeo-related-card:hover .aeo-related-art img { transform: none; }
 }
+
+
+/* Compact related SEO and GEO links: keep them stylish without dominating the page. */
+.aeo-service-page .aeo-related-compact {
+  padding: clamp(32px, 4vw, 52px) 0;
+  background: radial-gradient(ellipse at 15% 20%, rgba(29, 99, 184, .09), transparent 50%);
+}
+.aeo-service-page .aeo-related-compact .aeo-related-heading {
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr);
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.aeo-service-page .aeo-related-compact .aeo-related-heading h2 {
+  margin-top: 8px;
+  font-size: clamp(25px, 3vw, 36px);
+  letter-spacing: -.05em;
+}
+.aeo-service-page .aeo-related-compact .aeo-related-heading h2 span {
+  color: #ff8a9b;
+  background: none;
+  -webkit-text-fill-color: #ff8a9b;
+}
+.aeo-service-page .aeo-related-compact .aeo-related-heading > p {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.aeo-service-page .aeo-related-compact .aeo-related-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.aeo-service-page .aeo-related-compact .aeo-related-mini {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 0;
+  padding: 19px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+.aeo-service-page .aeo-related-compact .aeo-related-mini:hover {
+  transform: translateY(-2px);
+}
+.aeo-service-page .aeo-mini-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 135, 152, .25);
+  border-radius: 12px;
+  background: rgba(255, 135, 152, .08);
+  color: #ff9aaa;
+  font-size: 26px;
+  line-height: 1;
+}
+.aeo-service-page .aeo-related-geo .aeo-mini-icon {
+  border-color: rgba(120, 153, 255, .28);
+  background: rgba(120, 153, 255, .09);
+  color: #a9baff;
+}
+.aeo-service-page .aeo-mini-copy {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+.aeo-service-page .aeo-mini-copy strong {
+  color: #f5f7fd;
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -.015em;
+}
+.aeo-service-page .aeo-mini-copy strong span { color: #ff8a9b; white-space: nowrap; }
+.aeo-service-page .aeo-mini-copy small {
+  color: #aebbd1;
+  font-size: 11px;
+  line-height: 1.65;
+}
+.aeo-service-page .aeo-mini-arrow {
+  margin-left: auto;
+  flex: 0 0 auto;
+  color: #ff8a9b;
+  font-size: 18px;
+  transition: transform .2s ease;
+}
+.aeo-service-page .aeo-related-mini:hover .aeo-mini-arrow { transform: translate(2px,-2px); }
+@media (max-width: 700px) {
+  .aeo-service-page .aeo-related-compact .aeo-related-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 17px;
+  }
+  .aeo-service-page .aeo-related-compact .aeo-related-grid { grid-template-columns: minmax(0, 1fr); }
+  .aeo-service-page .aeo-related-compact .aeo-related-mini { padding: 17px; }
+}
