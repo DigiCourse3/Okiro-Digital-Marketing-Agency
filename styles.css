@@ -1521,3 +1521,158 @@ main > section::before {
   .aeo-service-page .subpage-card { transition: none; }
   .aeo-service-page .subpage-card:hover { transform: none; }
 }
+
+
+/* Related SEO and GEO service cards moved to a dedicated pre-footer section. */
+.aeo-service-page .aeo-related-services {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(58px, 7vw, 94px) 0;
+  border-top: 1px solid rgba(120, 148, 190, .17);
+  background:
+    radial-gradient(ellipse at 8% 30%, rgba(29, 99, 184, .12), transparent 44%),
+    radial-gradient(ellipse at 92% 78%, rgba(255, 127, 145, .07), transparent 40%);
+}
+.aeo-service-page .aeo-related-inner {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+}
+.aeo-service-page .aeo-related-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, .7fr);
+  gap: clamp(24px, 5vw, 70px);
+  align-items: end;
+  margin-bottom: 34px;
+}
+.aeo-service-page .aeo-related-heading h2 {
+  margin: 14px 0 0;
+  font-size: clamp(32px, 4.5vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -.06em;
+  text-wrap: balance;
+}
+.aeo-service-page .aeo-related-heading h2 span {
+  background: linear-gradient(95deg, #ff778f, #ffb08a 65%, #8dbdff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.aeo-service-page .aeo-related-heading > p {
+  margin: 0 0 4px;
+  color: #aebbd1;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.aeo-service-page .aeo-related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.aeo-service-page .aeo-related-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(120, 148, 190, .27);
+  border-radius: 24px;
+  background: linear-gradient(155deg, rgba(18, 31, 52, .98), rgba(8, 14, 26, .98));
+  box-shadow: 0 20px 55px rgba(0, 0, 0, .2);
+  transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+}
+.aeo-service-page .aeo-related-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 135, 152, .48);
+  box-shadow: 0 28px 65px rgba(0, 0, 0, .3);
+}
+.aeo-service-page .aeo-related-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 245px;
+  margin: 18px 18px 0;
+  overflow: hidden;
+  border: 1px solid rgba(120, 148, 190, .12);
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgba(53, 91, 158, .28), transparent 58%),
+    #071126;
+}
+.aeo-service-page .aeo-related-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 18px 35px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 127, 145, .7), rgba(91, 133, 206, .1));
+}
+.aeo-service-page .aeo-related-art img {
+  display: block;
+  width: min(86%, 340px);
+  height: 190px;
+  object-fit: contain;
+  transition: transform .3s ease;
+}
+.aeo-service-page .aeo-related-card:hover .aeo-related-art img { transform: scale(1.035); }
+.aeo-service-page .aeo-related-index {
+  position: absolute;
+  z-index: 1;
+  left: 17px;
+  bottom: 14px;
+  color: #b8c8e7;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+.aeo-service-page .aeo-related-content { padding: 25px 28px 29px; }
+.aeo-service-page .aeo-related-content .eyebrow {
+  color: #8da4c9;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.aeo-service-page .aeo-related-content h3 {
+  margin: 11px 0 12px;
+  font-size: clamp(22px, 2.3vw, 29px);
+  line-height: 1.25;
+  letter-spacing: -.045em;
+}
+.aeo-service-page .aeo-related-content h3 a {
+  color: #f5f7fd;
+  text-decoration: none;
+}
+.aeo-service-page .aeo-related-content h3 a span { color: #ff8a9b; white-space: nowrap; }
+.aeo-service-page .aeo-related-content p {
+  max-width: 520px;
+  margin: 0 0 15px;
+  color: #b4c0d5;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.aeo-service-page .aeo-related-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 0;
+  color: #f5f7fd;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.aeo-service-page .aeo-related-link span {
+  color: #ff8a9b;
+  transition: transform .2s ease;
+}
+.aeo-service-page .aeo-related-link:hover span { transform: translate(3px, -2px); }
+@media (max-width: 700px) {
+  .aeo-service-page .aeo-related-inner { width: min(100% - 32px, 560px); }
+  .aeo-service-page .aeo-related-heading { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-bottom: 24px; }
+  .aeo-service-page .aeo-related-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .aeo-service-page .aeo-related-art { min-height: 205px; margin: 12px 12px 0; }
+  .aeo-service-page .aeo-related-art img { height: 160px; }
+  .aeo-service-page .aeo-related-content { padding: 22px 22px 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aeo-service-page .aeo-related-card,
+  .aeo-service-page .aeo-related-art img,
+  .aeo-service-page .aeo-related-link span { transition: none; }
+  .aeo-service-page .aeo-related-card:hover,
+  .aeo-service-page .aeo-related-card:hover .aeo-related-art img { transform: none; }
+}
