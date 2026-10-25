@@ -2222,3 +2222,129 @@ body.aeo-service-page summary:focus-visible {
   body.aeo-service-page .subpage-section table td { min-width: 140px; padding: 13px; }
   body.aeo-service-page .service-steps { grid-template-columns: minmax(0, 1fr); }
 }
+
+
+/* Shared homepage-style card hover and branded section divider across inner pages. */
+body.inner-page main > section:not(.page-hero)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #071a35 0%, #0877c9 34%, #ff9d00 70%, #071a35 100%);
+  box-shadow: 0 0 8px rgba(8, 119, 201, .32), 0 0 14px rgba(255, 157, 0, .18);
+  pointer-events: none;
+  z-index: 2;
+}
+body.inner-page main > section:not(.page-hero) {
+  position: relative;
+}
+body.inner-page .subpage-card,
+body.inner-page .service-steps article,
+body.inner-page .aeo-faq-item,
+body.inner-page .industry-card,
+body.inner-page .work-card,
+body.inner-page .service-card,
+body.inner-page .aeo-related-mini,
+body.inner-page .aeo-related-card,
+body.inner-page .related-resources article,
+body.inner-page .portfolio-card,
+body.inner-page .blog-card,
+body.inner-page .feature-card,
+body.inner-page .process-card {
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background-color .3s ease;
+}
+body.inner-page .subpage-card:hover,
+body.inner-page .service-steps article:hover,
+body.inner-page .aeo-faq-item:hover,
+body.inner-page .industry-card:hover,
+body.inner-page .work-card:hover,
+body.inner-page .service-card:hover,
+body.inner-page .aeo-related-mini:hover,
+body.inner-page .aeo-related-card:hover,
+body.inner-page .related-resources article:hover,
+body.inner-page .portfolio-card:hover,
+body.inner-page .blog-card:hover,
+body.inner-page .feature-card:hover,
+body.inner-page .process-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 114, 118, .52);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, .24), 0 0 0 1px rgba(255, 114, 118, .04);
+}
+body.inner-page .subpage-card,
+body.inner-page .service-steps article,
+body.inner-page .aeo-faq-item {
+  border-color: rgba(185, 204, 255, .16);
+}
+body.inner-page .subpage-card::after,
+body.inner-page .service-steps article::after,
+body.inner-page .industry-card::after,
+body.inner-page .work-card::after,
+body.inner-page .service-card::after,
+body.inner-page .portfolio-card::after,
+body.inner-page .blog-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(ellipse at 50% 0%, rgba(255, 114, 118, .07), transparent 65%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+body.inner-page .subpage-card:hover::after,
+body.inner-page .service-steps article:hover::after,
+body.inner-page .industry-card:hover::after,
+body.inner-page .work-card:hover::after,
+body.inner-page .service-card:hover::after,
+body.inner-page .portfolio-card:hover::after,
+body.inner-page .blog-card:hover::after {
+  opacity: 1;
+}
+body.inner-page .subpage-card,
+body.inner-page .service-steps article,
+body.inner-page .industry-card,
+body.inner-page .work-card,
+body.inner-page .service-card,
+body.inner-page .portfolio-card,
+body.inner-page .blog-card {
+  position: relative;
+  overflow: hidden;
+}
+body.inner-page .subpage-card a,
+body.inner-page .service-steps article a,
+body.inner-page .industry-card a,
+body.inner-page .work-card a,
+body.inner-page .service-card a,
+body.inner-page .portfolio-card a,
+body.inner-page .blog-card a {
+  position: relative;
+  z-index: 1;
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  body.inner-page .subpage-card:hover,
+  body.inner-page .service-steps article:hover,
+  body.inner-page .aeo-faq-item:hover,
+  body.inner-page .industry-card:hover,
+  body.inner-page .work-card:hover,
+  body.inner-page .service-card:hover,
+  body.inner-page .aeo-related-mini:hover,
+  body.inner-page .aeo-related-card:hover,
+  body.inner-page .related-resources article:hover,
+  body.inner-page .portfolio-card:hover,
+  body.inner-page .blog-card:hover,
+  body.inner-page .feature-card:hover,
+  body.inner-page .process-card:hover {
+    transform: none;
+  }
+  body.inner-page .subpage-card::after,
+  body.inner-page .service-steps article::after,
+  body.inner-page .industry-card::after,
+  body.inner-page .work-card::after,
+  body.inner-page .service-card::after,
+  body.inner-page .portfolio-card::after,
+  body.inner-page .blog-card::after {
+    display: none;
+  }
+}
