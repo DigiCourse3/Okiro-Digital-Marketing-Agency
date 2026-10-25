@@ -2587,3 +2587,28 @@ body.aeo-service-page .subpage-cta button {
     margin-left: 0 !important;
   }
 }
+
+
+/* Mobile touch feedback: make AEO cards respond visibly when tapped. */
+@media (hover: none) {
+  body.aeo-service-page .subpage-card:active,
+  body.aeo-service-page .service-steps article:active,
+  body.aeo-service-page .aeo-related-mini:active,
+  body.aeo-service-page .aeo-related-card:active,
+  body.aeo-service-page .aeo-faq-item:active {
+    border-color: rgba(255, 123, 114, 0.8);
+    background: linear-gradient(145deg, #151f34, #101729);
+    box-shadow: 0 10px 28px rgba(255, 77, 94, 0.12);
+  }
+
+  body.aeo-service-page .subpage-card:active,
+  body.aeo-service-page .service-steps article:active,
+  body.aeo-service-page .aeo-related-mini:active,
+  body.aeo-service-page .aeo-related-card:active {
+    transform: scale(0.99);
+  }
+
+  body.aeo-service-page .aeo-faq-item summary:active {
+    color: #ffb0a8;
+  }
+}
