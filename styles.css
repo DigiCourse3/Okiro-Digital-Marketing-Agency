@@ -2348,3 +2348,110 @@ body.inner-page .blog-card a {
     display: none;
   }
 }
+
+
+/* AEO page: match homepage FAQ accordion and card hover treatment consistently. */
+body.aeo-service-page .aeo-faq-section .section-heading h2 {
+  font-size: clamp(32px, 4.4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.055em;
+  margin-top: 20px;
+}
+body.aeo-service-page .aeo-faq-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 14px;
+  align-items: start;
+}
+body.aeo-service-page .aeo-faq-item {
+  border: 1px solid #2b3852;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #121b2d, #0d1424);
+  box-shadow: none;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+body.aeo-service-page .aeo-faq-item:hover {
+  transform: translateY(-4px);
+  border-color: #ff72765c;
+  background: linear-gradient(145deg, #151f34, #101729);
+  box-shadow: 0 16px 32px #0005;
+}
+body.aeo-service-page .aeo-faq-item[open] {
+  border-color: #ff727680;
+  background: linear-gradient(145deg, #151f34, #101729);
+  box-shadow: 0 12px 30px #0004;
+}
+body.aeo-service-page .aeo-faq-item summary {
+  min-height: 56px;
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 750;
+  letter-spacing: -.015em;
+}
+body.aeo-service-page .aeo-faq-item summary::after {
+  content: "+";
+  color: #ff7b83;
+  font-size: 22px;
+  transition: transform .2s ease;
+}
+body.aeo-service-page .aeo-faq-item[open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+body.aeo-service-page .aeo-faq-answer {
+  padding: 0 18px 18px;
+  font-size: 13px;
+  line-height: 1.75;
+}
+body.aeo-service-page .aeo-faq-item summary:focus-visible {
+  outline: 2px solid #ff7b83;
+  outline-offset: -4px;
+}
+body.aeo-service-page .subpage-card,
+body.aeo-service-page .service-steps article,
+body.aeo-service-page .aeo-related-mini,
+body.aeo-service-page .aeo-related-card,
+body.aeo-service-page .aeo-faq-item {
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+body.aeo-service-page .subpage-card:hover,
+body.aeo-service-page .service-steps article:hover,
+body.aeo-service-page .aeo-related-mini:hover,
+body.aeo-service-page .aeo-related-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff72765c;
+  box-shadow: 0 16px 32px #0005;
+}
+body.aeo-service-page .service-steps article {
+  position: relative;
+  overflow: hidden;
+}
+body.aeo-service-page .service-steps article:hover {
+  background: linear-gradient(145deg, #151f34, #101729);
+}
+body.aeo-service-page .aeo-related-mini:hover,
+body.aeo-service-page .aeo-related-card:hover {
+  background: linear-gradient(145deg, #151f34, #101729);
+}
+@media (max-width: 680px) {
+  body.aeo-service-page .aeo-faq-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+  body.aeo-service-page .aeo-faq-item summary {
+    min-height: 56px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  body.aeo-service-page .aeo-faq-answer { padding: 0 16px 16px; }
+}
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  body.aeo-service-page .aeo-faq-item:hover,
+  body.aeo-service-page .subpage-card:hover,
+  body.aeo-service-page .service-steps article:hover,
+  body.aeo-service-page .aeo-related-mini:hover,
+  body.aeo-service-page .aeo-related-card:hover {
+    transform: none;
+  }
+}
