@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://okiro.co.in/sitemap.xml
 Sitemap: https://okiro.co.in/sitemap.txt
