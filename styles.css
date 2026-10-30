@@ -2713,3 +2713,86 @@ body.aeo-service-page .subpage-cta button {
   .float-card { max-width: 142px; padding: 7px 8px !important; }
   .card-convert { top: 98px !important; }
 }
+
+
+/* Mobile viewport repair: prevent the page canvas and sections from exceeding the phone width. */
+@media (max-width: 700px) {
+  html,
+  body {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  body {
+    margin: 0 !important;
+    position: relative;
+  }
+
+  main,
+  .site-header,
+  .site-footer,
+  section,
+  .section-wrap {
+    box-sizing: border-box;
+    max-width: 100% !important;
+  }
+
+  .section-wrap {
+    width: calc(100% - 32px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .site-header {
+    width: calc(100% - 32px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    min-width: 0 !important;
+  }
+
+  .hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .hero-visual {
+    overflow: hidden !important;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero p,
+  .hero a {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .marquee-band,
+  .client-strip,
+  .industry-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .okiro-mobile-contact-bar {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
