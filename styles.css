@@ -2796,3 +2796,14 @@ body.aeo-service-page .subpage-cta button {
     max-width: 100% !important;
   }
 }
+
+
+/* Justify the testimonials introduction on mobile only. Desktop alignment stays unchanged. */
+@media (max-width: 680px) {
+  .testimonials-intro {
+    text-align: justify !important;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+  }
+}
