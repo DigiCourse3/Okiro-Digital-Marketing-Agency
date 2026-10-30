@@ -89,6 +89,98 @@
     @media(max-width:900px){.hero{grid-template-columns:1fr 1fr;min-height:600px}.hero h1{font-size:clamp(48px,7vw,68px)}}
     @media(max-width:700px){.section-wrap,.site-header{width:calc(100% - 36px)}.site-header{height:76px}.brand-image{width:135px;height:59px}.brand-image img{max-height:59px}.nav-links{display:none}.menu-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:10px;order:3}.menu-toggle span{width:20px;height:2px;background:#fff;display:block}.hero{display:flex;flex-direction:column;align-items:stretch;padding-top:40px;padding-bottom:64px;min-height:auto}.hero-copy{padding:0}.hero h1.home-seo-title{font-size:clamp(34px,8.8vw,48px);line-height:1.08;letter-spacing:-.055em}.hero-intro{font-size:13px}.hero-actions{gap:18px;flex-wrap:wrap}.button{padding:14px 17px}.hero-proof{margin-top:33px}.hero-visual{height:380px;margin:15px 0 -60px}.hero-bottomline{bottom:15px;font-size:7px;letter-spacing:.08em}.hero-bottomline span:last-child{display:none}}
   </style>
+  <!-- Load styles immediately to prevent mobile layout shifting or appearing unstyled. -->
+  <link rel="stylesheet" href="styles.css">ml>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager: preserve immediate desktop loading; defer mobile container work to protect the initial render. -->
+<script>
+(function(w,d,s,l,i){
+  w[l]=w[l]||[];
+  var isMobile=w.matchMedia && w.matchMedia('(max-width: 700px)').matches;
+  w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  function loadGtm(){
+    if(w.__okiroGtmLoaded) return;
+    w.__okiroGtmLoaded=true;
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!=='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+  }
+  if(!isMobile){loadGtm();return;}
+  ['pointerdown','touchstart','scroll','keydown'].forEach(function(eventName){
+    w.addEventListener(eventName,loadGtm,{once:true,passive:true});
+  });
+  w.addEventListener('load',function(){w.setTimeout(loadGtm,2500);},{once:true});
+  w.setTimeout(loadGtm,6000);
+})(window,document,'script','dataLayer','GTM-PRLQX8LF');
+</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Grow your business with strategic SEO, Google Ads, Meta Ads, social media marketing, and high-performing websites. Okiro helps businesses attract the right audience and drive measurable growth." />
+  <meta name="theme-color" content="#080d1b" />
+  <title>Okiro | Digital Marketing Agency in Hyderabad</title>
+  <link rel="canonical" href="https://okiro.co.in/">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Okiro | Digital Marketing Agency in Hyderabad" />
+  <meta property="og:description" content="Grow your business with strategic SEO, Google Ads, Meta Ads, social media marketing, and high-performing websites. Okiro helps businesses attract the right audience and drive measurable growth." />
+  <meta name="twitter:card" content="summary" />
+  <!-- Load Manrope without blocking the first render; provide a stylesheet fallback only when JavaScript is disabled. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <style>
+    /* Critical above-the-fold styles: render the hero before the full stylesheet finishes loading. */
+    :root{--bg:#080d1b;--line:rgba(185,204,255,.13);--text:#f4f6ff;--muted:#9ba7c1;--red:#ff4d5e}
+    *{box-sizing:border-box}
+    html{scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .section-wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
+    .site-header{height:88px;width:min(1280px,calc(100% - 48px));margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}
+    .brand-image{display:flex;align-items:center;width:174px;height:72px}
+    .brand-image img{display:block;width:100%;height:auto;max-height:72px;object-fit:contain}
+    .nav-links{display:flex;gap:31px;color:#b7c0d5;font-size:12px;font-weight:600}
+    .header-cta{border:1px solid rgba(255,255,255,.24);border-radius:50px;padding:12px 17px;font-size:12px;font-weight:700}
+    .menu-toggle{display:none}
+    .hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;padding-top:34px;padding-bottom:75px}
+    .hero-copy{padding:40px 0 20px;z-index:2}
+    .eyebrow{font-size:10px;font-weight:800;letter-spacing:.18em;color:#aab5ce;display:flex;align-items:center;gap:9px}
+    .status-dot{width:7px;height:7px;border-radius:50%;background:#73e5b4}
+    .hero h1{font-size:clamp(52px,6.2vw,82px);line-height:1.02;letter-spacing:-.075em;margin:28px 0 23px;font-weight:800}
+    .hero h1.home-seo-title{font-size:clamp(38px,4.8vw,64px);line-height:1.06;letter-spacing:-.065em;max-width:720px;overflow-wrap:normal;hyphens:none}
+    .gradient-text{background:linear-gradient(110deg,#ff4d5e 5%,#ff9481 52%,#f3c2b0 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .brand-tagline{font-size:12px;letter-spacing:.02em;margin:0 0 14px;color:#dce2f1}
+    .hero-intro{max-width:460px;font-size:15px;line-height:1.9;color:#aab5cc}
+    .hero-actions{display:flex;align-items:center;gap:28px;margin-top:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:24px;border:0;border-radius:50px;padding:15px 21px;font-size:12px;font-weight:800}
+    .button-primary{background:linear-gradient(110deg,#ff4e60,#ff7b72);color:#fff}
+    .text-link{font-size:12px;color:#dce2f1;font-weight:700}
+    .hero-proof{display:flex;align-items:center;gap:13px;margin-top:54px}
+    .hero-proof p{font-size:10px;line-height:1.6;color:#d8deed;margin:0}
+    .hero-proof small{color:#8f9bb6;font-size:9px}
+    .hero-visual{height:515px;position:relative;display:grid;place-items:center;isolation:isolate}
+    /* Keep the hero illustration fully styled before styles.css finishes loading to prevent CLS. */
+    .visual-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(140,162,218,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(140,162,218,.07) 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(ellipse,black,transparent 70%);opacity:.6}
+    .planet{width:255px;height:255px;border-radius:50%;position:relative;background:radial-gradient(circle at 30% 25%,#ffd1c0 0,#ff6b6e 10%,#a32c58 28%,#342c6e 58%,#10152e 78%);box-shadow:inset -22px -28px 45px #050817,inset 10px 8px 30px #ffb0a366,0 0 90px #b52b6b32;animation:float 7s ease-in-out infinite;z-index:2}
+    .planet:before{content:"";position:absolute;inset:-30px;border:1px solid #aab9ef35;border-radius:50%;transform:rotateX(66deg) rotateZ(-20deg)}
+    .planet-shine{position:absolute;width:80px;height:80px;border-radius:50%;background:#ffd8c4;filter:blur(36px);top:24px;left:45px;opacity:.7}
+    .planet-ring{position:absolute;width:380px;height:115px;border:2px solid #e0a9d68a;border-left-color:#9b8cfa55;border-bottom-color:#a8b5ff22;border-radius:50%;top:72px;left:-62px;transform:rotate(-22deg);box-shadow:0 0 18px #d87cb91c}
+    .planet-core{position:absolute;inset:32px;border:1px solid #f7b4d324;border-radius:50%}
+    .orbit{position:absolute;border:1px solid rgba(151,176,238,.2);border-radius:50%;z-index:1}
+    .orbit-a{width:390px;height:390px}.orbit-b{width:455px;height:235px;transform:rotate(53deg)}.orbit-c{width:480px;height:300px;transform:rotate(-33deg)}
+    .float-card{position:absolute;z-index:3;display:flex;align-items:center;gap:10px;padding:12px 14px;background:linear-gradient(135deg,#1b2540e8,#101729e8);border:1px solid #c5d3ff2b;border-radius:13px;box-shadow:0 18px 40px #0004;backdrop-filter:blur(16px);min-width:190px}
+    .float-card small{display:block;color:#8e9bb8;font-size:8px;letter-spacing:.15em;font-weight:800}.float-card strong{font-size:10px;display:block;margin-top:5px}.float-card b{font-size:9px;color:#ff8588;margin-left:auto;align-self:flex-start}
+    .mini-icon{width:28px;height:28px;display:grid;place-items:center;border-radius:8px;background:#ff65731c;color:#ff8790;font-size:18px}
+    .card-reach{top:65px;left:0;animation:float 6s ease-in-out infinite}.card-convert{right:-4px;top:230px;animation:float 7s ease-in-out infinite reverse}.card-grow{bottom:65px;left:20px;animation:float 8s ease-in-out infinite}
+    .visual-caption{position:absolute;bottom:5px;right:0;color:#74819e;font-size:8px;letter-spacing:.16em;display:flex;align-items:center;gap:8px}.visual-caption span{height:1px;width:25px;background:var(--red)}
+    .proof-avatars{display:flex}.proof-avatars span{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;margin-right:-7px;border:2px solid var(--bg);font-size:10px;font-weight:800;background:#1d2b46}.proof-avatars span:nth-child(2){background:#6c4350}.proof-avatars span:nth-child(3){background:#ff6b70}
+    .hero-bottomline{position:absolute;bottom:22px;left:0;right:0;display:flex;justify-content:space-between;font-size:8px;letter-spacing:.16em;color:#697794}
+    @media(max-width:900px){.hero{grid-template-columns:1fr 1fr;min-height:600px}.hero h1{font-size:clamp(48px,7vw,68px)}}
+    @media(max-width:700px){.section-wrap,.site-header{width:calc(100% - 36px)}.site-header{height:76px}.brand-image{width:135px;height:59px}.brand-image img{max-height:59px}.nav-links{display:none}.menu-toggle{display:flex;flex-direction:column;gap:5px;background:none;border:0;padding:10px;order:3}.menu-toggle span{width:20px;height:2px;background:#fff;display:block}.hero{display:flex;flex-direction:column;align-items:stretch;padding-top:40px;padding-bottom:64px;min-height:auto}.hero-copy{padding:0}.hero h1.home-seo-title{font-size:clamp(34px,8.8vw,48px);line-height:1.08;letter-spacing:-.055em}.hero-intro{font-size:13px}.hero-actions{gap:18px;flex-wrap:wrap}.button{padding:14px 17px}.hero-proof{margin-top:33px}.hero-visual{height:380px;margin:15px 0 -60px}.hero-bottomline{bottom:15px;font-size:7px;letter-spacing:.08em}.hero-bottomline span:last-child{display:none}}
+  </style>
   <!-- Load the main stylesheet normally to avoid a late style swap and layout shift. -->
   <!-- Load the full stylesheet asynchronously on mobile so critical inline hero styles can paint first. Desktop keeps the original render-blocking stylesheet behavior. -->
   <script>
