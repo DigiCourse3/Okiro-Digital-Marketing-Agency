@@ -9,7 +9,7 @@ window.okiroSubmitLead = async function (form, feedback, source) {
     const payload = Object.fromEntries(new FormData(form).entries());
     payload._subject = 'New Okiro website enquiry';
     payload._template = 'table';
-    const response = await fetch('https://formsubmit.co/ajax/hello@okiro.co.in', {
+    const response = await fetch('https://formsubmit.co/ajax/peyyalashiva90@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(payload)
@@ -18,7 +18,7 @@ window.okiroSubmitLead = async function (form, feedback, source) {
     const message = String(result.message || result.error || '');
     const accepted = response.ok && (result.success === true || result.success === 'true');
     if (!accepted) {
-      if (feedback) feedback.textContent = message || 'We could not send your enquiry. Please email hello@okiro.co.in directly.';
+      if (feedback) feedback.textContent = message || 'We could not send your enquiry. Please email peyyalashiva90@gmail.com directly.';
       return false;
     }
     if (feedback) feedback.textContent = 'Thank you — your enquiry has been submitted successfully.';
@@ -209,7 +209,7 @@ window.okiroSubmitLead = async function (form, feedback, source) {
           <select id="projectModalService" name="service" required><option value="" disabled selected>Select a service</option><option>SEO & Organic Growth</option><option>Paid Media & PPC</option><option>Social Media Marketing</option><option>Website Development</option><option>Analytics & Conversion</option><option>Content Marketing</option><option>Google Ads</option><option>Meta Ads</option><option>Other / Not sure yet</option></select>
           <label for="projectModalMessage">Project goals (optional)</label><textarea id="projectModalMessage" name="message" rows="3" placeholder="What would you like to achieve?"></textarea>
           <button class="project-modal-submit" type="submit">Send project enquiry <span aria-hidden="true">↗</span></button>
-          <p class="project-modal-note">Submitting opens your email app with the enquiry details. No information is sent until you send that email.</p><p class="project-modal-feedback" aria-live="polite"></p>
+          <p class="project-modal-note">Your enquiry will be sent to our team when you submit this form.</p><p class="project-modal-feedback" aria-live="polite"></p>
         </form>
       </section>`;
     document.body.appendChild(modal);
