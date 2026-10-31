@@ -2856,3 +2856,33 @@ body.aeo-service-page .subpage-cta button {
     margin-right: auto !important;
   }
 }
+
+/* Shared card and panel background: matched to the supplied Strategy First reference. */
+body :is(
+  .service-card,
+  .service-note,
+  .work-card,
+  .testimonial-card,
+  .industry-card,
+  .industry-cta,
+  .industry-detail-art,
+  .subpage-card,
+  .feature-card,
+  .process-card,
+  .portfolio-card,
+  .blog-card,
+  .aeo-related-mini,
+  .aeo-related-card,
+  .aeo-faq-item,
+  .faq-item,
+  .service-steps article,
+  .float-card,
+  .contact-panel,
+  .contact-form,
+  .project-modal-dialog,
+  .project-modal-form,
+  .locations-list span,
+  .work-meta
+) {
+  background: linear-gradient(145deg, #131729 0%, #2b1d32 48%, #121728 100%) !important;
+}
