@@ -2897,3 +2897,62 @@ body:not(.inner-page) main > .hero .hero-intro{max-width:570px!important;color:#
 body:not(.inner-page) main > .hero .button-primary{padding:17px 25px!important;font-size:13px!important;box-shadow:0 12px 30px rgba(194,119,54,.28)!important}
 body:not(.inner-page) main > .hero .hero-actions{gap:18px}
 @media(max-width:700px){body:not(.inner-page) main > .hero h1.home-seo-title{font-size:clamp(33px,8.3vw,47px)!important}.okiro-golden-trust{padding:18px}.okiro-golden-trust__inner{display:grid;grid-template-columns:1fr 1fr;gap:14px}.okiro-golden-trust__inner span{font-size:8px}}
+
+
+
+/* GOLDEN SERENITY SITE-WIDE BACKGROUND OVERRIDES
+   Visual-only layer. Original page copy, images, hrefs, buttons and forms are untouched. */
+:root{
+ --bg:#21150f!important;--panel:#342217!important;--panel2:#40291b!important;
+ --line:rgba(235,190,123,.24)!important;--text:#f8ead5!important;--muted:#d7c0a1!important;
+ --red:#e8ad5d!important;--coral:#d88b43!important;--cyan:#edc98e!important;
+}
+html,body{background:#21150f!important;color:#f8ead5!important}
+body{background:radial-gradient(ellipse at 76% 8%,rgba(227,153,69,.25),transparent 34%),radial-gradient(ellipse at 8% 52%,rgba(133,73,35,.22),transparent 40%),linear-gradient(135deg,#21150f 0%,#382316 48%,#20140e 100%)!important}
+body>main{background:transparent!important}
+body>main>section,
+body>main>div:not(.project-modal-overlay),
+body>main>.hero,
+body>main>.marquee-band,
+body>main>.client-strip,
+body>main>.industry-section,
+body>main>.services-section,
+body>main>.work-section,
+body>main>.approach-section,
+body>main>.process-section,
+body>main>.locations-section,
+body>main>.testimonials-section,
+body>main>.faq-section,
+body>main>.contact-section,
+body>main>.cta-section,
+body>main>.subpage-section{background:transparent!important;background-color:transparent!important}
+body>main>.hero{background:radial-gradient(ellipse at 78% 38%,rgba(231,158,73,.26),transparent 42%),linear-gradient(110deg,#26180f 0%,#392315 55%,#21150f 100%)!important}
+body>main>.marquee-band{background:#101321!important;border-block:1px solid rgba(235,190,123,.35)!important}
+body>main>.client-strip{background:linear-gradient(110deg,#28190f,#3b2618,#28190f)!important}
+body>main>.industry-section,
+body>main>.approach-section,
+body>main>.locations-section,
+body>main>.testimonials-section,
+body>main>.faq-section{background:linear-gradient(135deg,rgba(39,24,15,.96),rgba(49,30,19,.96),rgba(31,20,14,.98))!important}
+body :is(.industry-inner,.section-wrap,.service-grid,.industry-grid,.approach-inner,.locations-inner,.testimonials-inner,.faq-inner){background:transparent!important}
+body :is(.service-card,.service-note,.work-card,.testimonial-card,.industry-card,.industry-cta,.industry-detail-art,.subpage-card,.feature-card,.process-card,.portfolio-card,.blog-card,.aeo-related-mini,.aeo-related-card,.aeo-faq-item,.faq-item,.service-steps article,.float-card,.contact-panel,.contact-form,.project-modal-dialog,.project-modal-form,.locations-list span,.work-meta){
+ background:linear-gradient(145deg,#3b271b 0%,#2b1d20 52%,#211a20 100%)!important;
+ border-color:rgba(235,190,123,.25)!important;
+}
+body :is(.industry-card-body,.testimonial-card,.faq-item,.service-card,.work-card,.feature-card,.process-card){color:#f8ead5!important}
+body :is(h1,h2,h3,h4,.section-heading h2,.industry-heading h2,.approach-copy h2,.locations-heading h2,.testimonials-heading h2,.faq-heading h2){color:#f8ead5!important}
+body :is(p,.hero-intro,.section-heading p,.industry-heading p,.approach-copy p,.locations-copy p,.testimonial-card p,.faq-item p){color:#d9c4aa!important}
+body :is(.eyebrow,.industry-eyebrow,.section-eyebrow){color:#efbd73!important}
+body :is(.gradient-text,.industry-heading h2 span,.approach-copy h2 span){background:linear-gradient(100deg,#f7d99f,#e3a052 56%,#f5dfb8)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+body :is(.button-primary,.submit-button,.project-modal-submit){background:linear-gradient(110deg,#f7d28f,#df9a49)!important;color:#28180e!important;border:1px solid rgba(255,226,176,.8)!important;box-shadow:0 12px 32px rgba(190,111,42,.24)!important}
+body :is(.button-outline,.text-link,.industry-learn){color:#f3d7aa!important}
+body :is(.contact-form input,.contact-form select,.contact-form textarea,.project-modal-form input,.project-modal-form select,.project-modal-form textarea){background:#211712!important;color:#f8ead5!important;border-color:rgba(235,190,123,.3)!important}
+.site-header{background:rgba(34,21,13,.88)!important;border-color:rgba(235,190,123,.3)!important}
+.site-footer{background:#1e130d!important;border-top-color:rgba(235,190,123,.28)!important}
+body:not(.inner-page) main>.hero .hero-visual{background:radial-gradient(ellipse at 55% 48%,rgba(239,172,91,.2),transparent 60%)!important;border-color:rgba(235,190,123,.16)!important}
+body:not(.inner-page) main>.hero h1.home-seo-title{font-size:clamp(36px,4.1vw,57px)!important;line-height:1.1!important;max-width:720px!important}
+body:not(.inner-page) main>.hero .button-primary{padding:18px 28px!important;min-height:58px!important;font-size:14px!important}
+@media(max-width:700px){
+ body>main>.hero{background:linear-gradient(145deg,#2b1a10,#3a2417 58%,#21150f)!important}
+ body:not(.inner-page) main>.hero h1.home-seo-title{font-size:clamp(33px,8.2vw,46px)!important}
+}
