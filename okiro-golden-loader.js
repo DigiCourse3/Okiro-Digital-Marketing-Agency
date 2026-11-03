@@ -1,0 +1,1 @@
+(function(){var l=document.createElement('link');l.rel='stylesheet';l.href='/okiro-golden-theme.css';document.head.appendChild(l);var s=document.createElement('script');s.src='/okiro-golden-trust.js';document.body.appendChild(s)})();
