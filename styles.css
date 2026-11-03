@@ -2956,3 +2956,28 @@ body:not(.inner-page) main>.hero .button-primary{padding:18px 28px!important;min
  body>main>.hero{background:linear-gradient(145deg,#2b1a10,#3a2417 58%,#21150f)!important}
  body:not(.inner-page) main>.hero h1.home-seo-title{font-size:clamp(33px,8.2vw,46px)!important}
 }
+
+
+/* 03 Nov visual corrections: full-bleed clients row and seamless repeated service ticker. */
+body>main>.client-strip.section-wrap{
+ width:100vw!important;max-width:100vw!important;
+ margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;
+ padding-left:clamp(24px,5vw,90px)!important;padding-right:clamp(24px,5vw,90px)!important;
+ box-sizing:border-box!important;
+ background:linear-gradient(105deg,#2b1a10 0%,#402817 50%,#2b1a10 100%)!important;
+}
+body>main>.client-strip .client-strip-head{max-width:1480px;margin-left:auto;margin-right:auto}
+body>main>.client-strip .client-marquee{width:100%;max-width:none;margin-left:0;margin-right:0;padding-left:0;padding-right:0;mask-image:linear-gradient(90deg,transparent 0,#000 2%,#000 98%,transparent 100%)}
+body>main>.client-strip .client-track{display:flex!important;flex-wrap:nowrap!important;gap:0!important;width:max-content!important;min-width:max-content!important;animation:okiro-client-seamless 38s linear infinite!important}
+body>main>.client-strip .client-track-set{display:flex!important;flex:0 0 auto!important;gap:16px!important;width:max-content!important;min-width:max-content!important;align-items:center!important;padding-right:16px!important}
+@keyframes okiro-client-seamless{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+body>main>.client-strip .client-wordmark{flex:0 0 auto!important;white-space:nowrap!important}
+body>main>.marquee-band{width:100vw!important;max-width:100vw!important;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;overflow:hidden!important;background:#21150f!important}
+body>main>.marquee-band .marquee-track{display:flex!important;flex-wrap:nowrap!important;justify-content:flex-start!important;gap:35px!important;width:max-content!important;min-width:max-content!important;padding-left:24px!important;animation:okiro-services-seamless 32s linear infinite!important}
+body>main>.marquee-band .marquee-track span,body>main>.marquee-band .marquee-track i{flex:0 0 auto!important;white-space:nowrap!important}
+@keyframes okiro-services-seamless{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:700px){
+ body>main>.client-strip.section-wrap{width:100vw!important;padding-left:18px!important;padding-right:18px!important}
+ body>main>.client-strip .client-track{animation-duration:44s!important}
+ body>main>.marquee-band .marquee-track{animation-duration:36s!important}
+}
