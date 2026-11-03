@@ -2981,3 +2981,25 @@ body>main>.marquee-band .marquee-track span,body>main>.marquee-band .marquee-tra
  body>main>.client-strip .client-track{animation-duration:44s!important}
  body>main>.marquee-band .marquee-track{animation-duration:36s!important}
 }
+
+/* FINAL GOLDEN HERO + FULL-BLEED CONTINUOUS MARQUEES */
+body:not(.inner-page) main>.hero{background:radial-gradient(ellipse at 78% 40%,rgba(237,167,84,.22),transparent 42%),linear-gradient(110deg,#26180f,#392315 55%,#21150f)!important}
+body:not(.inner-page) main>.hero .hero-visual{background-image:linear-gradient(90deg,rgba(37,23,14,.12),rgba(37,23,14,0) 42%),url('/assets/okiro-golden-lady.webp')!important;background-size:cover!important;background-position:center 38%!important;background-repeat:no-repeat!important;border:1px solid rgba(238,191,126,.22)!important;border-radius:24px!important;overflow:hidden!important;box-shadow:0 28px 80px rgba(0,0,0,.24)!important}
+body:not(.inner-page) main>.hero .hero-visual>*{display:none!important}
+body:not(.inner-page) main>.hero h1.home-seo-title{font-size:clamp(37px,4vw,56px)!important;line-height:1.12!important;max-width:700px!important}
+body:not(.inner-page) main>.hero .hero-copy{max-width:720px}
+body:not(.inner-page) main>.hero .hero-intro{max-width:590px!important}
+body:not(.inner-page) main>.hero .button-primary{min-height:60px!important;padding:18px 30px!important;font-size:14px!important;box-shadow:0 14px 36px rgba(210,139,62,.3)!important}
+body>main>.client-strip.section-wrap{width:100vw!important;max-width:none!important;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;padding:28px clamp(24px,5vw,90px) 34px!important;box-sizing:border-box!important;background:linear-gradient(110deg,#28190f,#3b2618,#28190f)!important}
+.client-strip-head{width:100%;max-width:1600px;margin:0 auto 18px!important}
+.client-marquee{width:100%;max-width:1600px;margin:0 auto!important;mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent)!important}
+.client-track{animation:client-scroll 34s linear infinite!important;will-change:transform}
+.client-track-set{flex:0 0 auto}
+.marquee-band{width:100vw!important;max-width:none!important;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important}
+.marquee-track{width:max-content!important;min-width:200%!important;justify-content:flex-start!important;gap:35px!important;animation:marquee 28s linear infinite!important;will-change:transform}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:700px){
+ body:not(.inner-page) main>.hero .hero-visual{width:100%!important;min-height:390px!important;background-position:center 34%!important}
+ body>main>.client-strip.section-wrap{padding-left:18px!important;padding-right:18px!important}
+ .marquee-track,.client-track{animation-duration:45s!important}
+}
