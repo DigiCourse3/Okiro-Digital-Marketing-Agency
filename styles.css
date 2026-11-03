@@ -3003,3 +3003,34 @@ body>main>.client-strip.section-wrap{width:100vw!important;max-width:none!import
  body>main>.client-strip.section-wrap{padding-left:18px!important;padding-right:18px!important}
  .marquee-track,.client-track{animation-duration:45s!important}
 }
+
+
+/* HOMEPAGE HERO REPAIR: full-bleed golden portrait on desktop and mobile. */
+body:not(.inner-page) main>.hero{
+  position:relative!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;
+  width:100%!important;max-width:none!important;min-height:min(100svh,920px)!important;margin:0!important;
+  padding:clamp(110px,14vh,160px) clamp(24px,7vw,110px) 90px!important;overflow:hidden!important;isolation:isolate!important;
+  background:#2b1a10!important;
+}
+body:not(.inner-page) main>.hero .hero-visual{
+  position:absolute!important;inset:0!important;z-index:-1!important;width:100%!important;height:100%!important;min-height:100%!important;
+  margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  background-image:linear-gradient(90deg,rgba(35,21,12,.76) 0%,rgba(35,21,12,.48) 31%,rgba(35,21,12,.08) 66%,rgba(35,21,12,.02) 100%),url('/assets/okiro-golden-lady.webp')!important;
+  background-size:cover!important;background-position:center 42%!important;background-repeat:no-repeat!important;
+}
+body:not(.inner-page) main>.hero .hero-visual>*{display:none!important}
+body:not(.inner-page) main>.hero .hero-copy{position:relative!important;z-index:2!important;width:min(650px,52%)!important;max-width:650px!important;padding:0!important}
+body:not(.inner-page) main>.hero h1.home-seo-title{max-width:650px!important;font-size:clamp(36px,4.2vw,58px)!important;text-shadow:0 2px 24px rgba(25,14,7,.32)!important}
+body:not(.inner-page) main>.hero .hero-intro,body:not(.inner-page) main>.hero .hero-proof p{color:#fff0d9!important}
+body:not(.inner-page) main>.hero .hero-bottomline{left:clamp(24px,7vw,110px)!important;right:clamp(24px,7vw,110px)!important}
+body:not(.inner-page) .okiro-social-rail,body:not(.inner-page) .okiro-contact-actions{display:none!important}
+@media(max-width:700px){
+ body:not(.inner-page) main>.hero{display:flex!important;min-height:100svh!important;padding:105px 22px 76px!important;justify-content:flex-start!important;background:#2b1a10!important}
+ body:not(.inner-page) main>.hero .hero-visual{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:100%!important;margin:0!important;border:0!important;border-radius:0!important;
+  background-image:linear-gradient(180deg,rgba(35,21,12,.58) 0%,rgba(35,21,12,.22) 40%,rgba(35,21,12,.74) 100%),url('/assets/okiro-golden-lady.webp')!important;
+  background-size:cover!important;background-position:58% center!important}
+ body:not(.inner-page) main>.hero .hero-copy{width:100%!important;max-width:100%!important;padding:0!important}
+ body:not(.inner-page) main>.hero h1.home-seo-title{max-width:100%!important;font-size:clamp(32px,8vw,44px)!important}
+ body:not(.inner-page) main>.hero .hero-intro{max-width:100%!important}
+ body:not(.inner-page) main>.hero .hero-bottomline{left:22px!important;right:22px!important;bottom:20px!important}
+}
