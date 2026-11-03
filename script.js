@@ -306,3 +306,6 @@ window.okiroSubmitLead = async function (form, feedback, source) {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mountMobileContactBar, { once: true });
   else mountMobileContactBar();
 })();
+
+/* Okiro golden-theme trust strip. Existing page content and forms remain unchanged. */
+(function(){function addTrust(){var hero=document.querySelector('main > .hero');if(!hero||document.querySelector('.okiro-golden-trust'))return;var strip=document.createElement('section');strip.className='okiro-golden-trust';strip.setAttribute('aria-label','Okiro approach');strip.innerHTML='<div class="okiro-golden-trust__inner"><span>STRATEGY-LED CAMPAIGNS</span><span>PERFORMANCE-FOCUSED EXECUTION</span><span>CLEAR REPORTING</span><span>BUILT AROUND YOUR GOALS</span></div>';hero.insertAdjacentElement('afterend',strip);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addTrust,{once:true});else addTrust();})();
