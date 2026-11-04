@@ -3629,3 +3629,58 @@ body:not(.inner-page) .hero-visual .card-convert strong{white-space:nowrap!impor
  body.mobile-nav-open .site-header.okiro-header .menu-toggle{position:relative!important;z-index:6200!important}
  .okiro-mobile-contact-bar{z-index:3000!important}
 }
+
+
+/* 04 Nov 2026: mobile service menu CTA, project form close control and hero labels. */
+.site-header.okiro-header .mega-dropdown .mega-footer{color:#49331f!important}
+.site-header.okiro-header .mega-dropdown .mega-footer span,
+.site-header.okiro-header .mega-dropdown .mega-footer strong{color:#49331f!important;opacity:1!important}
+.site-header.okiro-header .mega-dropdown .mega-footer a,
+.site-header.okiro-header .mega-dropdown .mega-footer .js-open-project-form{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ min-height:46px!important;padding:12px 18px!important;border-radius:12px!important;
+ background:#102d25!important;color:#fff4df!important;-webkit-text-fill-color:#fff4df!important;
+ font:800 14px/1.2 Manrope,Arial,sans-serif!important;text-decoration:none!important;
+ border:1px solid rgba(255,231,190,.55)!important;opacity:1!important;
+}
+.site-header.okiro-header .mega-dropdown .mega-footer a:hover{background:#1b493b!important;color:#fff!important}
+@media(max-width:700px){
+ .site-header.okiro-header .nav-links>.nav-item.open>.mega-dropdown{
+   display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:16px!important;
+   width:100%!important;max-height:none!important;overflow:visible!important;
+   padding:12px 12px 18px!important;box-sizing:border-box!important;
+   background:rgba(255,247,232,.48)!important;border-radius:0 0 12px 12px!important;
+ }
+ .site-header.okiro-header .mega-dropdown .mega-column{display:block!important;width:100%!important;min-width:0!important}
+ .site-header.okiro-header .mega-dropdown .mega-column b{display:block!important;padding:6px 0 10px!important;color:#76502d!important;font-weight:800!important;letter-spacing:.12em!important}
+ .site-header.okiro-header .mega-dropdown .mega-column a{display:block!important;padding:9px 4px!important;color:#2f241a!important;font-size:14px!important;line-height:1.4!important;overflow-wrap:anywhere!important}
+ .site-header.okiro-header .mega-dropdown .mega-footer{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important;padding:14px 4px 4px!important;border-top:1px solid rgba(73,48,28,.24)!important}
+ .site-header.okiro-header .mega-dropdown .mega-footer span{color:#49331f!important;font-size:13px!important;line-height:1.45!important}
+ .site-header.okiro-header .mega-dropdown .mega-footer a{width:max-content!important;max-width:100%!important;min-height:46px!important;font-size:14px!important}
+}
+.project-modal{z-index:99999!important;align-items:start!important}
+.project-modal-dialog{position:relative!important;z-index:100000!important;padding-top:68px!important}
+.project-modal-close{
+ position:absolute!important;top:14px!important;right:14px!important;z-index:100001!important;
+ display:flex!important;align-items:center!important;justify-content:center!important;
+ width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;
+ border:1px solid rgba(235,190,123,.75)!important;border-radius:50%!important;
+ background:linear-gradient(135deg,#f5d39d,#dfa45f)!important;color:#24170f!important;
+ -webkit-text-fill-color:#24170f!important;font:700 28px/1 Manrope,Arial,sans-serif!important;
+ opacity:1!important;visibility:visible!important;box-shadow:0 4px 14px rgba(0,0,0,.22)!important;
+ cursor:pointer!important;
+}
+@media(max-width:760px){
+ .project-modal{z-index:99999!important;align-items:start!important;padding:max(82px,env(safe-area-inset-top)) 8px max(10px,env(safe-area-inset-bottom))!important}
+ .project-modal-dialog{width:calc(100vw - 16px)!important;max-width:560px!important;max-height:calc(100dvh - 94px - env(safe-area-inset-bottom))!important;overflow-x:hidden!important;overflow-y:auto!important;padding:68px 14px 22px!important;margin:0 auto!important;scroll-padding-top:66px!important;overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important}
+ .project-modal-close{top:12px!important;right:12px!important;width:44px!important;height:44px!important}
+ .project-modal-dialog .project-modal-kicker{padding-right:52px!important}
+ body.project-modal-open{overflow:hidden!important}
+}
+body:not(.inner-page) main>.hero .hero-bottomline{position:static!important;display:flex!important;align-items:center!important;width:100%!important;margin:18px 0 0!important;padding:0!important;color:#f5d6a5!important;font:800 13px/1.55 Manrope,Arial,sans-serif!important;letter-spacing:.12em!important;text-transform:uppercase!important;opacity:1!important}
+body:not(.inner-page) main>.hero .hero-bottomline span{display:block!important;color:#f5d6a5!important;font-weight:800!important;font-size:13px!important;line-height:1.55!important;opacity:1!important;text-shadow:0 1px 10px rgba(0,0,0,.42)!important}
+body:not(.inner-page) main>.hero .hero-visual .visual-caption,
+body:not(.inner-page) main>.hero .scroll-cue,
+body:not(.inner-page) main>.hero .scroll-indicator,
+body:not(.inner-page) main>.hero .hero-scroll{display:none!important}
+@media(max-width:700px){body:not(.inner-page) main>.hero .hero-bottomline{margin:14px 0 0!important;font-size:12px!important}body:not(.inner-page) main>.hero .hero-bottomline span{font-size:12px!important;letter-spacing:.1em!important}}
