@@ -3477,3 +3477,12 @@ body:not(.inner-page) .hero-visual .planet{animation:float 7s ease-in-out infini
  body:not(.inner-page) main>.hero .hero-visual .orbit-b{width:330px!important;height:175px!important}
  body:not(.inner-page) main>.hero .hero-visual .orbit-c{width:350px!important;height:210px!important}
 }
+
+
+/* Keep the CONVERT card headline on one line. */
+body:not(.inner-page) .hero-visual .card-convert{min-width:248px!important;width:max-content!important}
+body:not(.inner-page) .hero-visual .card-convert strong{white-space:nowrap!important;display:block!important}
+@media(max-width:700px){
+ body:not(.inner-page) main>.hero .hero-visual .card-convert{min-width:232px!important;width:max-content!important;max-width:calc(100vw - 28px)!important;padding:9px 10px!important}
+ body:not(.inner-page) main>.hero .hero-visual .card-convert strong{font-size:8.5px!important;white-space:nowrap!important}
+}
