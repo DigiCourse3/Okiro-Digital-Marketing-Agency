@@ -3684,3 +3684,111 @@ body:not(.inner-page) main>.hero .scroll-cue,
 body:not(.inner-page) main>.hero .scroll-indicator,
 body:not(.inner-page) main>.hero .hero-scroll{display:none!important}
 @media(max-width:700px){body:not(.inner-page) main>.hero .hero-bottomline{margin:14px 0 0!important;font-size:12px!important}body:not(.inner-page) main>.hero .hero-bottomline span{font-size:12px!important;letter-spacing:.1em!important}}
+
+
+/* 04 Nov 2026: responsive UX and shared visual-system polish */
+:root{
+ --okiro-ink:#24180f;--okiro-brown:#382417;--okiro-gold:#e7b875;
+ --okiro-gold-light:#f5d9ad;--okiro-cream:#fff4e3;--okiro-muted:#d8c5ad;
+ --okiro-border:rgba(231,184,117,.25);
+}
+html{scroll-padding-top:96px}
+body{font-family:Manrope,Arial,sans-serif}
+.button,.header-cta,.project-modal-submit,.submit-button,.button-outline{
+ font-family:Manrope,Arial,sans-serif;font-weight:800;letter-spacing:.01em;
+}
+.button-primary,.header-cta,.project-modal-submit,.submit-button{
+ background:linear-gradient(120deg,#d69b50,#efc98f)!important;
+ color:#24180f!important;-webkit-text-fill-color:#24180f!important;
+ border:1px solid rgba(255,239,210,.58)!important;
+ box-shadow:0 8px 24px rgba(30,17,8,.18);
+}
+.button-primary:hover,.header-cta:hover,.project-modal-submit:hover,.submit-button:hover{
+ background:linear-gradient(120deg,#edbd79,#ffdfae)!important;
+ color:#24180f!important;transform:translateY(-2px);
+}
+.text-link,.card-link{color:#f4d5a8!important}
+.text-link span,.card-link span{color:#e7b875!important}
+.section-heading h2,.approach-copy h2,.about-copy h2,.contact-copy h2,
+.page-hero h1,.subpage-section h2{font-family:Manrope,Arial,sans-serif;letter-spacing:-.055em}
+.service-card,.subpage-card,.work-card{border-color:var(--okiro-border)}
+.service-card{padding:26px;min-height:410px}
+.service-card h3{font-size:19px;line-height:1.3;margin:20px 0 10px}
+.service-card>p{font-size:13px;line-height:1.75;color:#c7b49d;min-height:68px}
+.card-link{min-height:44px;margin-top:20px;padding-top:14px;font-size:12px}
+.services-section{padding-top:clamp(76px,9vw,125px);padding-bottom:clamp(76px,9vw,120px)}
+.section-heading{margin-bottom:clamp(30px,4vw,48px)}
+.section-heading>p{font-size:13px;line-height:1.8;color:#c4b29d}
+.hero-intro{color:#e0cfb9;line-height:1.85}
+.page-hero>p,.subpage-section p{color:#cbb9a2;line-height:1.85}
+.site-header.okiro-header .header-cta{border-radius:999px;padding:13px 20px}
+.project-modal{padding:20px!important;align-items:center!important;justify-content:center!important}
+.project-modal-dialog{max-height:min(90dvh,900px)!important;overflow-y:auto!important;overscroll-behavior:contain!important}
+.project-modal-close{width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;font-size:30px!important;box-shadow:0 5px 18px rgba(0,0,0,.35)!important}
+@media(max-width:760px){
+ .site-header.okiro-header .nav-links,
+ .site-header.okiro-header .nav-links.open{
+  top:74px!important;left:0!important;right:0!important;width:100vw!important;
+  height:calc(100dvh - 74px)!important;min-height:0!important;max-height:calc(100dvh - 74px)!important;
+  padding:12px 18px calc(100px + env(safe-area-inset-bottom))!important;
+  overflow-x:hidden!important;overflow-y:auto!important;
+  overscroll-behavior:contain!important;-webkit-overflow-scrolling:touch!important;
+ }
+ .site-header.okiro-header .nav-links>a,
+ .site-header.okiro-header .nav-links>.nav-item>.nav-trigger{
+  min-height:54px!important;padding:13px 6px!important;font-size:16px!important;
+ }
+ .site-header.okiro-header .nav-links>.nav-item.open>.mega-dropdown{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  gap:15px!important;padding:15px 12px 18px!important;
+ }
+ .site-header.okiro-header .mega-dropdown .mega-column{padding-bottom:6px!important}
+ .site-header.okiro-header .mega-dropdown .mega-column b{
+  font-size:11px!important;line-height:1.5!important;margin-bottom:5px!important;
+ }
+ .site-header.okiro-header .mega-dropdown .mega-column a{
+  min-height:40px!important;padding:10px 5px!important;font-size:14px!important;line-height:1.45!important;
+ }
+ .site-header.okiro-header .mega-dropdown .mega-footer{
+  padding:16px 4px 5px!important;gap:13px!important;
+ }
+ .site-header.okiro-header .mega-dropdown .mega-footer span{font-size:13px!important;line-height:1.6!important}
+ .site-header.okiro-header .mega-dropdown .mega-footer a{
+  width:100%!important;min-height:48px!important;justify-content:center!important;
+  font-size:14px!important;border-radius:999px!important;
+ }
+ body:not(.inner-page) main>.hero .hero-intro{font-size:15px!important;line-height:1.8!important;color:#fff0dc!important}
+ body:not(.inner-page) main>.hero .hero-bottomline span{font-size:12px!important;color:#ffe0b3!important}
+ .services-section{padding-top:74px!important;padding-bottom:76px!important}
+ .section-heading{display:block!important;margin-bottom:30px!important}
+ .section-heading h2{font-size:clamp(34px,9vw,44px)!important;line-height:1.1!important;margin:15px 0 16px!important}
+ .section-heading>p{font-size:13px!important;line-height:1.75!important;margin-top:12px!important;color:#d2bea4!important}
+ .services-grid{grid-template-columns:1fr!important;gap:16px!important}
+ .service-card{min-height:0!important;padding:22px!important;border-radius:18px!important}
+ .service-art{height:145px!important;margin:15px 0!important}
+ .service-card h3{font-size:19px!important;margin:17px 0 8px!important}
+ .service-card>p{font-size:13px!important;line-height:1.75!important;min-height:0!important;margin-bottom:18px!important}
+ .card-link{min-height:48px!important;margin-top:12px!important;font-size:12px!important}
+ .project-modal{padding:max(10px,env(safe-area-inset-top)) 8px max(10px,env(safe-area-inset-bottom))!important;align-items:center!important}
+ .project-modal-dialog{
+  width:calc(100vw - 16px)!important;max-width:560px!important;
+  max-height:calc(100dvh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom))!important;
+  margin:0 auto!important;padding:70px 16px 22px!important;overflow-x:hidden!important;overflow-y:auto!important;
+ }
+ .project-modal-close{top:12px!important;right:12px!important;width:48px!important;height:48px!important}
+ .project-modal-dialog h2{font-size:clamp(25px,7vw,34px)!important;line-height:1.15!important}
+ .project-modal-dialog .project-modal-intro{font-size:13px!important;line-height:1.65!important}
+ .project-modal-dialog input,.project-modal-dialog select,.project-modal-dialog textarea{min-height:44px!important;font-size:14px!important}
+ .project-modal-dialog label{margin-top:12px!important}
+ .project-modal-submit{min-height:50px!important;width:100%!important;border-radius:999px!important}
+ .page-hero{padding-top:52px!important;padding-bottom:38px!important}
+ .page-hero h1{font-size:clamp(36px,10vw,52px)!important;line-height:1.08!important}
+ .page-hero>p{font-size:14px!important;line-height:1.8!important}
+ .subpage-section{padding-top:40px!important;padding-bottom:48px!important}
+ .subpage-grid{gap:16px!important}
+}
+@media(max-width:380px){
+ .site-header.okiro-header .nav-links{padding-inline:14px!important}
+ .site-header.okiro-header .mega-dropdown .mega-column a{font-size:13px!important}
+ .project-modal-dialog{padding-inline:13px!important}
+}
