@@ -4024,3 +4024,30 @@ body.inner-page .site-footer{margin-top:18px}
  body.inner-page .subpage-card,body.inner-page .service-detail,.portfolio-card .portfolio-photo,.site-header.okiro-header .menu-toggle span{transition:none!important}
  body.inner-page .subpage-card:hover,body.inner-page .service-detail:hover{transform:none!important}
 }
+
+
+/* Full-bleed footer: remove the side gutters so the footer background spans the entire viewport on every page. */
+.site-footer{
+  box-sizing:border-box!important;
+  width:100vw!important;
+  max-width:none!important;
+  margin-left:calc(50% - 50vw)!important;
+  margin-right:calc(50% - 50vw)!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+  padding-left:clamp(20px,9.6vw,168px)!important;
+  padding-right:clamp(20px,9.6vw,168px)!important;
+  background:#24170f!important;
+  border-radius:0!important;
+}
+.site-footer::before{width:100vw!important;left:50%!important}
+.site-footer .footer-disclaimer,.site-footer .copyright{min-width:0!important}
+@media(max-width:700px){
+  .site-footer{
+    width:100vw!important;
+    margin-left:calc(50% - 50vw)!important;
+    margin-right:calc(50% - 50vw)!important;
+    padding-left:20px!important;
+    padding-right:20px!important;
+  }
+}
