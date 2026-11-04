@@ -3357,3 +3357,18 @@ body:not(.inner-page) main>.hero .hero-proof p{color:#fff0d9!important}
 .site-header.okiro-header .nav-search{display:none!important}
 .site-header.okiro-header .header-cta{padding:10px 13px!important;font-size:11px!important}
 }
+/* Apply the uploaded reference styling to existing top-level links and dropdown triggers. */
+.site-header.okiro-header .nav-links>.nav-item{height:54px!important;display:flex!important;align-items:center!important;position:relative!important}
+.site-header.okiro-header .nav-links>.nav-item>.nav-trigger{position:relative!important;display:inline-flex!important;align-items:center!important;min-height:54px!important;padding:0!important;gap:7px!important;color:#35271b!important;font:500 14px/1 Manrope,Arial,sans-serif!important;white-space:nowrap!important}
+.site-header.okiro-header .nav-links>.nav-item>.nav-trigger:hover{color:#120d08!important}
+.site-header.okiro-header .nav-links>.nav-item>.nav-trigger[aria-current="page"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#fff2d9;border-radius:2px}
+.site-header.okiro-header .nav-links>.nav-item>.nav-trigger>span{color:#59432f!important;font-size:11px!important}
+.site-header.okiro-header .nav-links>.nav-item>.dropdown{z-index:1100!important}
+@media(max-width:700px){
+ .site-header.okiro-header .nav-links>.nav-item{display:block!important;height:auto!important;width:100%!important}
+ .site-header.okiro-header .nav-links>.nav-item>.nav-trigger{display:flex!important;width:100%!important;min-height:48px!important;justify-content:space-between!important;border-bottom:1px solid rgba(75,48,27,.18)!important;color:#342316!important;font-size:15px!important}
+ .site-header.okiro-header .nav-links>.nav-item>.nav-trigger[aria-current="page"]::after{left:0;right:auto;bottom:7px;width:34px}
+ .site-header.okiro-header .nav-links>.nav-item>.dropdown{position:static!important;top:auto!important;left:auto!important;right:auto!important;width:100%!important;max-height:none!important;overflow:visible!important;margin:0 0 8px!important}
+ .site-header.okiro-header .nav-links>.nav-item.open>.about-dropdown{display:block!important}
+ .site-header.okiro-header .nav-links>.nav-item.open>.mega-dropdown{display:grid!important}
+}
