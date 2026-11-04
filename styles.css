@@ -3317,3 +3317,20 @@ body:not(.inner-page) main>.hero .hero-proof p{color:#fff0d9!important}
  body:not(.inner-page) main>.hero .hero-bottomline{left:20px!important;right:20px!important;bottom:16px!important}
 }
 @media(max-width:380px){.site-header.okiro-header .brand-image img{max-width:96px!important}.site-header.okiro-header .header-cta{padding:9px 10px!important}body:not(.inner-page) main>.hero .hero-copy{width:72%!important;max-width:72%!important}body:not(.inner-page) main>.hero h1.home-seo-title{font-size:27px!important}}
+
+
+/* Golden reference navigation: desktop and mobile finishing rules. */
+.site-header.okiro-header .nav-search form button{
+  border:0!important;border-radius:7px!important;padding:10px 14px!important;
+  background:#3b2818!important;color:#fff1d7!important;font:700 12px/1 Manrope,Arial,sans-serif!important;
+  cursor:pointer!important;white-space:nowrap!important;
+}
+.site-header.okiro-header .nav-search form button:hover{background:#67452a!important}
+.site-header.okiro-header .nav-links>a{transition:color .2s ease,opacity .2s ease!important}
+.site-header.okiro-header .nav-links>a:hover{opacity:.72!important}
+@media(max-width:700px){
+  .site-header.okiro-header .nav-links{z-index:2100!important}
+  .site-header.okiro-header .nav-links.open{display:flex!important}
+  .site-header.okiro-header .header-cta{margin-left:0!important}
+  body:not(.inner-page) main>.hero .hero-visual{width:56%!important;background-position:72% center!important}
+}
