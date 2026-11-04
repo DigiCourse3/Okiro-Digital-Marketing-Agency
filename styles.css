@@ -3882,3 +3882,41 @@ body{font-family:Manrope,Arial,sans-serif}
 @media(prefers-reduced-motion:reduce){
  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Match the CONVERT floating card dimensions to REACH and GROW. */
+body:not(.inner-page) .hero-visual .card-convert{
+  box-sizing:border-box!important;
+  width:190px!important;
+  min-width:190px!important;
+  max-width:190px!important;
+}
+body:not(.inner-page) .hero-visual .card-convert strong{
+  white-space:normal!important;
+  overflow-wrap:break-word!important;
+}
+@media(max-width:900px){
+  body:not(.inner-page) .hero-visual .card-convert{
+    width:148px!important;
+    min-width:148px!important;
+    max-width:148px!important;
+  }
+}
+@media(max-width:700px){
+  body:not(.inner-page) main>.hero .hero-visual .card-convert{
+    width:148px!important;
+    min-width:148px!important;
+    max-width:148px!important;
+  }
+  body:not(.inner-page) main>.hero .hero-visual .card-convert strong{
+    font-size:9px!important;
+    white-space:normal!important;
+  }
+}
+@media(max-width:380px){
+  body:not(.inner-page) main>.hero .hero-visual .card-convert{
+    width:138px!important;
+    min-width:138px!important;
+    max-width:138px!important;
+  }
+}
