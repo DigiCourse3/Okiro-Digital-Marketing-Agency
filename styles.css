@@ -3372,3 +3372,37 @@ body:not(.inner-page) main>.hero .hero-proof p{color:#fff0d9!important}
  .site-header.okiro-header .nav-links>.nav-item.open>.about-dropdown{display:block!important}
  .site-header.okiro-header .nav-links>.nav-item.open>.mega-dropdown{display:grid!important}
 }
+
+
+/* Restore Okiro brand mark, original animated orbital hero and social links. */
+.site-header.okiro-header .brand-image{display:flex!important;visibility:visible!important;opacity:1!important;flex:0 0 158px!important;width:158px!important;height:58px!important}
+.site-header.okiro-header .brand-image img{display:block!important;visibility:visible!important;opacity:1!important;max-width:158px!important;max-height:58px!important;width:auto!important;height:auto!important;object-fit:contain!important}
+.okiro-social-rail{display:flex!important;visibility:visible!important;opacity:1!important}
+body:not(.inner-page) .okiro-social-rail{display:flex!important;visibility:visible!important;opacity:1!important}
+body:not(.inner-page) main>.hero .hero-visual{
+  position:relative!important;inset:auto!important;z-index:1!important;
+  display:grid!important;place-items:center!important;width:100%!important;height:515px!important;
+  min-height:380px!important;margin:0!important;padding:0!important;
+  background:none!important;background-image:none!important;border:0!important;
+  border-radius:0!important;overflow:visible!important;box-shadow:none!important;opacity:1!important;
+}
+body:not(.inner-page) main>.hero .hero-visual>*{display:block!important}
+body:not(.inner-page) main>.hero .hero-visual .visual-grid{position:absolute!important;inset:0!important}
+body:not(.inner-page) main>.hero .hero-visual .orbit{position:absolute!important}
+body:not(.inner-page) main>.hero .hero-visual .planet{position:relative!important}
+body:not(.inner-page) main>.hero .hero-visual .visual-caption{position:absolute!important}
+@media(min-width:701px){
+ body:not(.inner-page) main>.hero{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:center!important}
+ body:not(.inner-page) main>.hero .hero-copy{position:relative!important;z-index:2!important;width:auto!important;max-width:none!important}
+}
+@media(max-width:700px){
+ .site-header.okiro-header .brand-image{flex:0 0 auto!important;width:116px!important;height:48px!important}
+ .site-header.okiro-header .brand-image img{max-width:116px!important;max-height:48px!important}
+ body:not(.inner-page) main>.hero .hero-visual{position:relative!important;inset:auto!important;width:100%!important;height:360px!important;min-height:300px!important;margin:8px 0 0!important;background:none!important}
+ body:not(.inner-page) main>.hero .hero-visual .planet{width:190px!important;height:190px!important}
+ body:not(.inner-page) main>.hero .hero-visual .planet-ring{width:285px!important;height:86px!important;left:-48px!important;top:52px!important}
+ body:not(.inner-page) main>.hero .hero-visual .orbit-a{width:290px!important;height:290px!important}
+ body:not(.inner-page) main>.hero .hero-visual .orbit-b{width:330px!important;height:175px!important}
+ body:not(.inner-page) main>.hero .hero-visual .orbit-c{width:350px!important;height:210px!important}
+}
+@media(prefers-reduced-motion:reduce){.planet{animation:none!important}}
