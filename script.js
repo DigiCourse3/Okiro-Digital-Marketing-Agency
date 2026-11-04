@@ -83,6 +83,7 @@ window.okiroSubmitLead = async function (form, feedback, source) {
   const setMenuOpen = (open) => {
     if (!nav || !menuToggle) return;
     nav.classList.toggle('open', open);
+    document.body.classList.toggle('mobile-nav-open', open && mobileQuery.matches);
     menuToggle.setAttribute('aria-expanded', String(open));
     menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   };
@@ -149,6 +150,7 @@ window.okiroSubmitLead = async function (form, feedback, source) {
   });
 
   mobileQuery.addEventListener?.('change', () => {
+    document.body.classList.remove('mobile-nav-open');
     setMenuOpen(false);
     nav?.querySelectorAll('.nav-item.open').forEach((item) => item.classList.remove('open'));
   });
