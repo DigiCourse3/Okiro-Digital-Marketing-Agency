@@ -3792,3 +3792,93 @@ body{font-family:Manrope,Arial,sans-serif}
  .site-header.okiro-header .mega-dropdown .mega-column a{font-size:13px!important}
  .project-modal-dialog{padding-inline:13px!important}
 }
+
+
+/* 04 Nov 2026: screenshot-led mobile polish, preserving the desktop layout. */
+.button,.header-cta,.text-link,.card-link,.service-card,.nav-links a,
+.okiro-mobile-contact-bar a,.okiro-social-rail a{
+ transition:color .2s ease,background-color .2s ease,border-color .2s ease,
+ transform .2s ease,box-shadow .2s ease;
+}
+:focus-visible{
+ outline:3px solid #f0c27e!important;
+ outline-offset:3px!important;
+}
+.button-primary,.submit-button,.project-modal-submit{
+ min-height:48px;
+}
+.service-card:hover{
+ border-color:rgba(231,184,117,.58)!important;
+ box-shadow:0 16px 36px rgba(20,11,5,.2);
+}
+.contact-form input,.contact-form select,.contact-form textarea,
+.project-modal-form input,.project-modal-form select,.project-modal-form textarea{
+ border-color:rgba(231,184,117,.25);
+}
+@media(max-width:700px){
+ body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}
+ /* The fixed contact bar already gives mobile visitors quick contact options.
+    Remove the separate vertical social rail so it cannot cover hero copy or CTAs. */
+ .okiro-social-rail{display:none!important}
+ .okiro-mobile-contact-bar{
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  height:calc(70px + env(safe-area-inset-bottom))!important;
+  padding:5px 5px calc(5px + env(safe-area-inset-bottom))!important;
+  background:linear-gradient(110deg,#f2d2a3 0%,#dfb47d 100%)!important;
+  border-top:1px solid rgba(76,48,25,.28)!important;
+  box-shadow:0 -8px 24px rgba(35,20,10,.18)!important;
+ }
+ .okiro-mobile-contact-bar a{
+  color:#352316!important;-webkit-text-fill-color:#352316!important;
+  font-size:11px!important;font-weight:800!important;
+  border-right:1px solid rgba(69,43,23,.2)!important;
+ }
+ .okiro-mobile-contact-bar a:last-child{border-right:0!important}
+ .okiro-mobile-contact-bar svg{width:21px!important;height:21px!important;color:#352316!important}
+ .okiro-mobile-contact-bar a:active,
+ .okiro-mobile-contact-bar a:focus-visible{
+  background:rgba(255,248,235,.55)!important;
+  outline:2px solid #78502d!important;outline-offset:-3px!important;
+ }
+ .site-header.okiro-header .menu-toggle{
+  border:1px solid rgba(75,48,26,.34)!important;
+  border-radius:50%!important;width:48px!important;height:48px!important;
+  align-items:center!important;justify-content:center!important;
+  background:rgba(255,246,230,.22)!important;
+ }
+ .site-header.okiro-header .menu-toggle span{background:#352316!important}
+ body:not(.inner-page) main>.hero{
+  width:100%!important;max-width:100%!important;
+  padding-left:20px!important;padding-right:20px!important;
+  padding-top:42px!important;padding-bottom:30px!important;
+ }
+ body:not(.inner-page) main>.hero h1.home-seo-title{
+  font-size:clamp(35px,8vw,44px)!important;
+  line-height:1.09!important;letter-spacing:-.05em!important;
+  max-width:100%!important;
+ }
+ body:not(.inner-page) main>.hero .hero-actions{gap:14px!important}
+ body:not(.inner-page) main>.hero .button-primary{
+  min-height:52px!important;padding:15px 23px!important;
+  border-radius:999px!important;
+ }
+ body:not(.inner-page) main>.hero .text-link{
+  min-height:42px!important;display:inline-flex!important;
+  align-items:center!important;
+ }
+ body:not(.inner-page) main>.hero .hero-proof{
+  gap:13px!important;margin-top:28px!important;
+  padding-bottom:5px!important;
+ }
+ body:not(.inner-page) main>.hero .hero-proof p{
+  font-size:12px!important;line-height:1.5!important;
+ }
+ body:not(.inner-page) main>.hero .hero-proof small{font-size:10px!important}
+ .contact-form{padding:20px!important}
+ .contact-form input,.contact-form select{min-height:48px!important;font-size:16px!important}
+ .contact-form textarea{font-size:16px!important}
+ .submit-button{min-height:50px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
