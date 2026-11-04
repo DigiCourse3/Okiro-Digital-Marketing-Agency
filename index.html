@@ -100,23 +100,9 @@
       background: linear-gradient(145deg, #131729 0%, #2b1d32 48%, #121728 100%) !important;
     }
 </style>
-  <!-- Load the main stylesheet normally to avoid a late style swap and layout shift. -->
-  <!-- Load the full stylesheet asynchronously on mobile so critical inline hero styles can paint first. Desktop keeps the original render-blocking stylesheet behavior. -->
-  <script>
-    (function () {
-      var mobile = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'styles.css?v=20261104-golden-menu-v3';
-      if (mobile) {
-        link.media = 'print';
-        link.onload = function () { this.media = 'all'; };
-      }
-      document.head.appendChild(link);
-    })();
-  </script>
-  <noscript><link rel="stylesheet" href="styles.css?v=20261104-nav-golden-v2"></noscript>
- <link rel="icon" href="favicon.ico" sizes="any"> <link rel="icon" type="image/png" sizes="96x96" href="assets/okiro-favicon-96.png"> <link rel="icon" type="image/png" sizes="32x32" href="assets/okiro-favicon-32.png"> <link rel="icon" type="image/png" sizes="16x16" href="assets/okiro-favicon-16.png"> <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"> 
+  <!-- Load the golden theme stylesheet consistently on desktop and mobile. -->
+  <link rel="stylesheet" href="styles.css?v=20261104-golden-menu-v3">
+  <link rel="icon" href="favicon.ico" sizes="any"> <link rel="icon" type="image/png" sizes="96x96" href="assets/okiro-favicon-96.png"> <link rel="icon" type="image/png" sizes="32x32" href="assets/okiro-favicon-32.png"> <link rel="icon" type="image/png" sizes="16x16" href="assets/okiro-favicon-16.png"> <link rel="apple-touch-icon" href="assets/apple-touch-icon.png"> 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
