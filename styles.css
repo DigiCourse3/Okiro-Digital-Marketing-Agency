@@ -4051,3 +4051,24 @@ body.inner-page .site-footer{margin-top:18px}
     padding-right:20px!important;
   }
 }
+
+
+/* Okiro refreshed brand marks: transparent logo backgrounds for light header and dark footer. */
+.brand-image{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  padding:0!important;
+  overflow:visible!important;
+}
+.brand-image img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+}
+.site-header .brand-image{width:190px!important;height:58px!important}
+.site-footer .footer-brand{width:190px!important;height:58px!important}
+@media(max-width:700px){
+  .site-header .brand-image{width:150px!important;height:48px!important}
+  .site-footer .footer-brand{width:165px!important;height:52px!important}
+}
