@@ -4455,3 +4455,48 @@ main a:not(.button):not(.button-primary):not(.header-cta):hover{color:#FF9A3D}
   .site-header.okiro-header .nav-links>a,
   .site-header.okiro-header .nav-links .nav-trigger{color:#F8FAFC!important}
 }
+
+
+/* OKIRO enquiry modal: navy theme and accessible form contrast, all pages. */
+body .project-modal .project-modal-dialog,
+body .project-modal-dialog{
+  background:linear-gradient(145deg,#102A56 0%,#0B2344 62%,#081B33 100%)!important;
+  background-color:#102A56!important;
+  border:1px solid #42658F!important;
+  color:#F8FAFC!important;
+  color-scheme:dark!important;
+}
+body .project-modal .project-modal-kicker{color:#FFB15C!important}
+body .project-modal h2,
+body .project-modal-dialog h2,
+body .project-modal-dialog strong{color:#FFFFFF!important}
+body .project-modal .project-modal-intro,
+body .project-modal .project-modal-note{color:#D7E2F0!important}
+body .project-modal .project-modal-form,
+body .project-modal .project-modal-form label{
+  background:transparent!important;color:#F8FAFC!important;
+}
+body .project-modal .project-modal-form input,
+body .project-modal .project-modal-form select,
+body .project-modal .project-modal-form textarea{
+  background:#081B33!important;background-color:#081B33!important;
+  border:1px solid #42658F!important;
+  color:#F8FAFC!important;
+  -webkit-text-fill-color:#F8FAFC!important;
+}
+body .project-modal .project-modal-form input::placeholder,
+body .project-modal .project-modal-form textarea::placeholder{
+  color:#B8C9DF!important;-webkit-text-fill-color:#B8C9DF!important;opacity:1!important;
+}
+body .project-modal .project-modal-form option{background:#081B33!important;color:#F8FAFC!important}
+body .project-modal .project-modal-form :is(input,select,textarea):focus{
+  border-color:#FF8A24!important;outline:2px solid rgba(255,138,36,.45)!important;
+  outline-offset:1px!important;
+}
+body .project-modal .project-modal-close{
+  background:#FF6500!important;border:1px solid #FF6500!important;color:#081B33!important;
+}
+body .project-modal .project-modal-submit{
+  background:#FF6500!important;border:1px solid #FF6500!important;color:#FFFFFF!important;
+}
+body .project-modal .project-modal-feedback{color:#B8F2D0!important}
