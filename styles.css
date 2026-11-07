@@ -4500,3 +4500,123 @@ body .project-modal .project-modal-submit{
   background:#FF6500!important;border:1px solid #FF6500!important;color:#FFFFFF!important;
 }
 body .project-modal .project-modal-feedback{color:#B8F2D0!important}
+
+
+/* OKIRO GLOBAL BRAND OVERRIDE - navy backgrounds, blue borders, orange actions, Space Grotesk + Inter.
+   Intentionally overrides legacy brown/gold theme declarations across all pages. */
+:root{
+ --okiro-navy:#081B33;--okiro-deep:#0B2344;--okiro-panel:#102A56;
+ --okiro-panel2:#163D6B;--okiro-border:#31527D;--okiro-orange:#FF6500;
+ --okiro-orange-hover:#E85B00;--okiro-white:#F8FAFC;--okiro-copy:#D7E2F0;
+ --okiro-muted:#B8C9DF;
+}
+html{background:#081B33!important;color-scheme:dark!important}
+body,body.inner-page,body:not(.inner-page){
+ background:#081B33!important;
+ background-image:radial-gradient(ellipse at 80% 0%,rgba(20,93,160,.22),transparent 40%),linear-gradient(145deg,#081B33 0%,#0B2344 58%,#081B33 100%)!important;
+ color:#F8FAFC!important;
+ font-family:'Inter',Arial,sans-serif!important;
+}
+h1,h2,h3,h4,h5,h6,.site-header,.nav-links,.nav-trigger,.button,.button-primary,
+.button-outline,.submit-button,.header-cta,.project-modal-submit,
+.section-kicker,.eyebrow,.footer-links{
+ font-family:'Space Grotesk',Arial,sans-serif!important;
+}
+/* Remove old brown/gold backgrounds from all page regions and full-width bands. */
+body main,body main>section,body main>div:not(.hero-visual),
+body.inner-page main>section,body.inner-page main>div,
+.section-wrap,.section-inner,.section-container,.content-section,
+.service-page-section,.subpage-section,.process-section,.why-section,
+.portfolio-section,.blog-section,.faq-section,.industry-section,
+.locations-section,.testimonials-section,.client-strip,.marquee-band{
+ background-color:transparent!important;
+ color:#F8FAFC!important;
+}
+body main>section,body.inner-page main>section{
+ background-image:linear-gradient(145deg,rgba(11,35,68,.96),rgba(8,27,51,.98))!important;
+ border-color:rgba(92,139,194,.32)!important;
+}
+body main>section:is(.hero,.page-hero,.service-page-hero),
+body.inner-page main>section:is(.hero,.page-hero,.service-page-hero){
+ background-image:radial-gradient(ellipse at 78% 10%,rgba(28,103,174,.38),transparent 48%),linear-gradient(125deg,#06152E,#103D79 58%,#0B2344)!important;
+}
+/* Cards, panels and forms use blue surfaces, never brown. */
+body :is(.service-card,.work-card,.subpage-card,.service-detail,.contact-panel,
+.contact-form,.testimonial-card,.blog-card,.portfolio-card,.feature-card,
+.process-card,.faq-item,.industry-card,.info-card,.stat-card,.client-wordmark,
+.step,.about-values,.form-card,.contact-form-wrap,.project-form-card){
+ background:linear-gradient(145deg,#163D6B 0%,#102A56 100%)!important;
+ background-color:#102A56!important;color:#F8FAFC!important;
+ border-color:#31527D!important;
+}
+body :is(.site-header,.site-header.okiro-header,.nav-links,.site-footer,.footer-main,
+.footer-bottom,.footer-content,.footer-inner){
+ background:#081B33!important;color:#F8FAFC!important;
+ border-color:#31527D!important;
+}
+body .site-footer,body .site-footer *{color:#D7E2F0!important}
+body .site-footer :is(h1,h2,h3,h4,h5,h6,strong,b,a){color:#F8FAFC!important}
+body :is(h1,h2,h3,h4,h5,h6,.section-heading,.section-title){color:#F8FAFC!important}
+body :is(p,li,label,small,.description,.hero-intro,.section-heading>p,
+.service-detail-copy,.service-detail-copy p,.subpage-card p,.service-card p,
+.work-card p,.blog-card p,.contact-panel p,.footer-copy){
+ color:#D7E2F0!important;
+}
+body :is(.eyebrow,.section-kicker,.num,.step-no){color:#FFB15C!important}
+body a:not(.button):not(.button-primary):not(.header-cta):not(.project-modal-submit){
+ color:#F1F6FC;
+}
+body a:not(.button):not(.button-primary):not(.header-cta):hover{color:#FF9A3D!important}
+/* Force readable navigation including dropdown triggers and chevrons. */
+.site-header.okiro-header .nav-links>a,
+.site-header.okiro-header .nav-links .nav-trigger,
+.site-header.okiro-header .nav-links .nav-trigger *,
+.site-header.okiro-header .nav-links .dropdown a,
+.site-header.okiro-header .mega-dropdown a{color:#F8FAFC!important}
+.site-header.okiro-header .nav-links .dropdown,
+.site-header.okiro-header .nav-links .mega-dropdown,
+.site-header.okiro-header .about-dropdown{
+ background:#102A56!important;color:#F8FAFC!important;border:1px solid #31527D!important;
+}
+/* All CTA/button variants have a clear orange fill and white text. */
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button){
+ background:#FF6500!important;background-image:none!important;
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ border:1px solid #FF6500!important;box-shadow:0 8px 24px rgba(255,101,0,.18)!important;
+}
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button):hover{
+ background:#E85B00!important;color:#FFFFFF!important;
+}
+body :is(.button-outline,.button:not(.button-primary)){
+ background:#0B2344!important;color:#FFFFFF!important;
+ border:1px solid #5B83B2!important;
+}
+body :is(input,select,textarea){
+ background:#081B33!important;color:#F8FAFC!important;
+ border:1px solid #42658F!important;
+}
+body :is(input,select,textarea)::placeholder{color:#B8C9DF!important;opacity:1!important}
+body select option{background:#081B33!important;color:#F8FAFC!important}
+body :is(.project-modal-dialog,.project-modal .project-modal-dialog){
+ background:linear-gradient(145deg,#102A56,#081B33)!important;
+ border:1px solid #42658F!important;color:#F8FAFC!important;
+}
+body .project-modal .project-modal-form label{color:#F8FAFC!important}
+body .project-modal .project-modal-form :is(input,select,textarea){
+ background:#081B33!important;color:#F8FAFC!important;border-color:#42658F!important;
+}
+body :is(.client-wordmark,.location-pill,.location-tag,.tag-pill){
+ background:#102A56!important;color:#F8FAFC!important;border-color:#42658F!important;
+}
+body :is(.card,.panel,.feature,.feature-box,.stat-box,.service-box){
+ border-color:#31527D!important;
+}
+:focus-visible{outline:2px solid #FF9A3D!important;outline-offset:3px!important}
+@media(max-width:700px){
+ body,body.inner-page{background:#081B33!important}
+ .site-header.okiro-header,.site-header.okiro-header .nav-links{background:#081B33!important}
+ .site-header.okiro-header .nav-links>a,
+ .site-header.okiro-header .nav-links .nav-trigger{color:#F8FAFC!important}
+}
