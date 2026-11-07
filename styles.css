@@ -4620,3 +4620,10 @@ body :is(.card,.panel,.feature,.feature-box,.stat-box,.service-box){
  .site-header.okiro-header .nav-links>a,
  .site-header.okiro-header .nav-links .nav-trigger{color:#F8FAFC!important}
 }
+
+
+/* Final typography standard: Manrope across every page and component. */
+html,body,body *,
+button,input,select,textarea{
+ font-family:'Manrope',Arial,sans-serif!important;
+}
