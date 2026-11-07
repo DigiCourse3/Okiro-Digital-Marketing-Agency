@@ -4222,3 +4222,134 @@ body{background:radial-gradient(ellipse at 78% 5%,rgba(20,93,160,.22),transparen
 .button-primary:hover,.submit-button:hover,.project-modal-submit:hover,.header-cta:hover{background:#E85B00!important}
 .gradient-text{background:linear-gradient(105deg,#FF6500 0%,#FF9238 55%,#FFC18A 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
 @media(max-width:700px){.approach-section{padding:58px 0!important}.about-section{padding:54px 0 66px!important}}
+
+
+/* OKIRO SITE-WIDE BACKGROUND + CONTRAST REPAIR
+   Applied to every page that loads styles.css, not just the homepage. */
+:root{
+  color-scheme:dark;
+  --okiro-navy:#081B33;
+  --okiro-deep:#0B2344;
+  --okiro-blue:#102A56;
+  --okiro-blue-light:#163D6B;
+  --okiro-orange:#FF6500;
+  --okiro-white:#F8FAFC;
+  --okiro-muted:#D0DBE9;
+}
+html,body{
+  background-color:#081B33!important;
+  color:#F8FAFC!important;
+}
+body{
+  background-image:radial-gradient(ellipse at 78% 4%,rgba(20,93,160,.24),transparent 38%),linear-gradient(145deg,#081B33 0%,#0B2344 52%,#081B33 100%)!important;
+}
+body.inner-page,
+body.inner-page main,
+body.inner-page main.section-wrap,
+main,main.section-wrap{
+  background-color:transparent!important;
+  color:#F8FAFC!important;
+}
+/* Make all major page sections use the same navy/blue visual system. */
+body:not(.inner-page) main>section,
+body.inner-page main>section:not(.page-hero),
+.subpage-section,
+.service-page-section,
+.service-content-section,
+.content-section,
+.process-section,
+.why-section,
+.portfolio-section,
+.blog-section,
+.contact-section,
+.faq-section,
+.industry-section{
+  color:#F8FAFC;
+}
+.page-hero,.service-page-hero,.hero,
+body.inner-page .page-hero,
+body.inner-page .service-page-hero{
+  background:radial-gradient(ellipse at 80% 15%,rgba(31,105,174,.34),transparent 48%),linear-gradient(125deg,#06152E 0%,#103D79 58%,#0B2344 100%)!important;
+  color:#F8FAFC!important;
+}
+.subpage-section,.service-page-section,.content-section,.process-section,
+.why-section,.portfolio-section,.blog-section,.contact-section,
+.faq-section,.industry-section{
+  background:transparent!important;
+}
+.service-card,.work-card,.subpage-card,.service-detail,.contact-panel,
+.contact-form,.testimonial-card,.blog-card,.portfolio-card,.feature-card,
+.process-card,.faq-item,.industry-card,.info-card,.stat-card{
+  background:linear-gradient(145deg,#163D6B 0%,#102A56 100%)!important;
+  color:#F8FAFC!important;
+  border-color:rgba(173,202,239,.25)!important;
+}
+/* Default readable text on dark sections and cards. */
+body:not(.light-section) main p,
+body:not(.light-section) main li,
+body:not(.light-section) main label,
+body:not(.light-section) main .description,
+body:not(.light-section) main .service-detail-copy,
+body:not(.light-section) main .service-detail-copy p,
+body:not(.light-section) main .subpage-card p,
+body:not(.light-section) main .service-card p,
+body:not(.light-section) main .work-card p,
+body:not(.light-section) main .blog-card p,
+body:not(.light-section) main .contact-panel p{
+  color:#D7E2F0!important;
+}
+body main h1,body main h2,body main h3,body main h4,
+body main h5,body main h6,
+body main .section-heading h2,
+body main .page-hero h1,
+body main .service-page-hero h1{
+  color:#F8FAFC!important;
+}
+body main a:not(.button):not(.button-primary):not(.header-cta){
+  color:#F1F6FC;
+}
+body main a:not(.button):not(.button-primary):not(.header-cta):hover{
+  color:#FF9A3D;
+}
+.eyebrow,.section-kicker,.num,.step-no,.service-detail .num{
+  color:#FF9A3D!important;
+}
+/* Light panels are intentional accents. Keep every text element dark enough there. */
+.approach-section,.about-section,.light-section,.light-panel{
+  color:#102A43!important;
+  background:#F2F6FC!important;
+}
+.approach-section :is(h1,h2,h3,h4,h5,h6,strong,b),
+.about-section :is(h1,h2,h3,h4,h5,h6,strong,b),
+.light-section :is(h1,h2,h3,h4,h5,h6,strong,b),
+.light-panel :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:#102A43!important;
+}
+.approach-section :is(p,li,span,label,small),
+.about-section :is(p,li,span,label,small),
+.light-section :is(p,li,span,label,small),
+.light-panel :is(p,li,span,label,small){
+  color:#465B72!important;
+}
+.approach-section a:not(.button):not(.button-primary),
+.about-section a:not(.button):not(.button-primary),
+.light-section a:not(.button):not(.button-primary),
+.light-panel a:not(.button):not(.button-primary){
+  color:#124B80!important;
+}
+.approach-section .step-icon,.approach-section .step-no,
+.about-section .about-values span{color:#E85B00!important}
+/* Forms, dropdowns, and footer retain strong contrast across every page. */
+input,select,textarea{
+  color:#F8FAFC;
+}
+input::placeholder,textarea::placeholder{color:#AFC1D8!important;opacity:1}
+select option{background:#102A56;color:#F8FAFC}
+.site-footer,.site-footer *{color:#D7E2F0}
+.site-footer{background:#06152E!important}
+.site-footer h2,.site-footer h3,.site-footer h4,.site-footer strong{color:#FFFFFF!important}
+.site-footer a{color:#F8FAFC!important}
+@media(max-width:700px){
+  body,body.inner-page{background-color:#081B33!important}
+  .page-hero,.service-page-hero{border-radius:16px}
+}
