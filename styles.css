@@ -4199,3 +4199,26 @@ strong,b{font-family:'Inter',Arial,sans-serif!important;font-weight:600}
  .site-header.okiro-header .nav-links .mega-dropdown a{color:#E7EEF8!important}
  .site-footer .footer-brand{width:165px!important;height:55px!important}
 }
+
+
+/* OKIRO palette balance update: 75% navy/blue, 15% lighter blue surfaces, 10% orange accents. */
+:root{--okiro-navy:#081B33;--okiro-deep-blue:#0B2344;--okiro-surface:#102A56;--okiro-surface-light:#163D6B;--okiro-soft:#F2F6FC;--okiro-orange:#FF6500;--okiro-orange-hover:#E85B00}
+body{background:radial-gradient(ellipse at 78% 5%,rgba(20,93,160,.22),transparent 38%),linear-gradient(145deg,#081B33 0%,#0B2344 55%,#081B33 100%)!important}
+.marquee-band{background:#0B2344!important}
+.service-card,.work-card,.subpage-card,.blog-card{background:linear-gradient(145deg,#163D6B 0%,#102A56 100%)!important;border-color:rgba(150,185,235,.22)!important}
+.service-art{background:radial-gradient(ellipse at 50% 40%,#24558A 0%,#102A56 75%)!important}
+.approach-section{background:#F2F6FC!important;border-block:1px solid #DCE6F2!important;color:#102A43!important}
+.approach-section h2,.approach-section h3,.approach-section strong{color:#102A43!important}
+.approach-section .approach-copy>p,.approach-section .step p{color:#52657B!important}
+.approach-section .step-no,.approach-section .step-icon{color:#E85B00!important}
+.approach-section .steps,.approach-section .step{border-color:#D7E1ED!important}
+.about-section{background:linear-gradient(135deg,#EAF1FA 0%,#F7F9FC 58%,#E8F0FA 100%)!important;color:#102A43!important}
+.about-section h2,.about-section h3,.about-section strong{color:#102A43!important}
+.about-section .about-copy>p{color:#52657B!important}
+.about-section .about-values div{border-color:#D7E1ED!important}
+.about-section .about-values span{color:#E85B00!important}
+.about-orb{box-shadow:inset -24px -25px 45px #060a18,0 0 70px rgba(20,93,160,.18)!important}
+.button-primary,.submit-button,.project-modal-submit,.header-cta{background:#FF6500!important;border-color:#FF6500!important;box-shadow:0 8px 24px rgba(255,101,0,.18)!important}
+.button-primary:hover,.submit-button:hover,.project-modal-submit:hover,.header-cta:hover{background:#E85B00!important}
+.gradient-text{background:linear-gradient(105deg,#FF6500 0%,#FF9238 55%,#FFC18A 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important}
+@media(max-width:700px){.approach-section{padding:58px 0!important}.about-section{padding:54px 0 66px!important}}
