@@ -4353,3 +4353,105 @@ select option{background:#102A56;color:#F8FAFC}
   body,body.inner-page{background-color:#081B33!important}
   .page-hero,.service-page-hero{border-radius:16px}
 }
+
+
+/* FINAL OKIRO NAVY THEME + SITE-WIDE TEXT VISIBILITY FIX
+   This block is intentionally last so older golden-theme rules cannot override it. */
+:root{
+  color-scheme:dark!important;
+  --okiro-navy:#081B33;
+  --okiro-deep:#0B2344;
+  --okiro-blue:#102A56;
+  --okiro-blue-light:#163D6B;
+  --okiro-orange:#FF6500;
+  --okiro-white:#F8FAFC;
+  --okiro-body:#D7E2F0;
+}
+html,body{
+  background-color:#081B33!important;
+  color:#F8FAFC!important;
+}
+body{
+  background-image:radial-gradient(ellipse at 78% 4%,rgba(20,93,160,.24),transparent 38%),linear-gradient(145deg,#081B33 0%,#0B2344 55%,#081B33 100%)!important;
+}
+/* Replace the brown homepage bands and client section with navy/blue. */
+body:not(.inner-page) main>.marquee-band,
+body:not(.inner-page) main>.client-strip,
+body:not(.inner-page) main>.industry-section,
+body:not(.inner-page) main>.approach-section,
+body:not(.inner-page) main>.testimonials-section,
+body:not(.inner-page) main>.about-section,
+body:not(.inner-page) main>.locations-section,
+body:not(.inner-page) main>.faq-section,
+body:not(.inner-page) main>.contact-section,
+body:not(.inner-page) main>.services-section,
+body:not(.inner-page) main>.work-section{
+  background:linear-gradient(135deg,#081B33 0%,#0B2344 52%,#102A56 100%)!important;
+  color:#F8FAFC!important;
+  border-color:rgba(150,185,235,.22)!important;
+}
+body>main>.marquee-band{background:#0B2344!important}
+body>main>.client-strip{background:linear-gradient(135deg,#081B33,#102A56)!important}
+body>main>.client-strip .client-strip-subtitle{color:#D7E2F0!important}
+body>main>.client-strip .client-strip-note{color:#AFC1D8!important}
+body>main>.client-strip .client-wordmark{
+  background:#0B1730!important;color:#F8FAFC!important;
+  border:1px solid #31527D!important;box-shadow:none!important;
+}
+body>main>.client-strip .client-separator{color:#FF6500!important}
+body>main>.marquee-band .marquee-track{color:#D7E2F0!important}
+body>main>.marquee-band .marquee-track i{color:#FF6500!important}
+/* Header links, including dropdown triggers, must stay bright on navy. */
+.site-header.okiro-header,
+.site-header.okiro-header .nav-links,
+.site-header.okiro-header .nav-links>a,
+.site-header.okiro-header .nav-links .nav-trigger,
+.site-header.okiro-header .nav-links .nav-trigger span{
+  color:#F8FAFC!important;
+}
+.site-header.okiro-header{
+  background:#081B33!important;border-bottom:1px solid rgba(150,185,235,.22)!important;
+}
+.site-header.okiro-header .nav-links>a:hover,
+.site-header.okiro-header .nav-links .nav-trigger:hover,
+.site-header.okiro-header .nav-links .nav-trigger:hover span{color:#FF9A3D!important}
+.site-header.okiro-header .dropdown,
+.site-header.okiro-header .mega-dropdown,
+.site-header.okiro-header .about-dropdown{
+  background:#102A56!important;color:#F8FAFC!important;border:1px solid #31527D!important;
+}
+.site-header.okiro-header .dropdown a,
+.site-header.okiro-header .mega-dropdown a{color:#E7EEF8!important}
+.site-header.okiro-header .mega-dropdown b,
+.site-header.okiro-header .mega-dropdown .mega-footer span{color:#F8FAFC!important}
+/* Readable copy and headings on all dark page sections. */
+main,main>section,main>section:not(.light-section){color:#F8FAFC}
+main p,main li,main label,main small,main .description,
+main .hero-intro,main .section-heading>p,main .client-strip-subtitle,
+main .service-detail-copy,main .service-detail-copy p,
+main .subpage-card p,main .service-card p,main .work-card p,
+main .blog-card p,main .contact-panel p,main .step p{
+  color:#D7E2F0!important;
+}
+main h1,main h2,main h3,main h4,main h5,main h6,
+main strong,main b{color:#F8FAFC}
+main a:not(.button):not(.button-primary):not(.header-cta){color:#F1F6FC}
+main a:not(.button):not(.button-primary):not(.header-cta):hover{color:#FF9A3D}
+.eyebrow,.section-kicker,.client-strip .eyebrow{color:#FFB15C!important}
+.service-card,.work-card,.subpage-card,.service-detail,.contact-panel,
+.contact-form,.testimonial-card,.blog-card,.portfolio-card,.feature-card,
+.process-card,.faq-item,.industry-card,.info-card,.stat-card{
+  background:linear-gradient(145deg,#163D6B 0%,#102A56 100%)!important;
+  color:#F8FAFC!important;border-color:rgba(173,202,239,.25)!important;
+}
+.site-footer,.site-footer *{color:#D7E2F0!important}
+.site-footer{background:#06152E!important}
+.site-footer h2,.site-footer h3,.site-footer h4,.site-footer strong,
+.site-footer a{color:#F8FAFC!important}
+@media(max-width:700px){
+  .site-header.okiro-header,.site-header.okiro-header .nav-links{
+    background:#081B33!important;color:#F8FAFC!important;
+  }
+  .site-header.okiro-header .nav-links>a,
+  .site-header.okiro-header .nav-links .nav-trigger{color:#F8FAFC!important}
+}
