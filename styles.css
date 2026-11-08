@@ -5260,3 +5260,46 @@ body textarea{min-height:120px}
  body .site-header.okiro-header .nav-links>a,
  body .site-header.okiro-header .nav-links .nav-trigger{font-size:13px!important}
 }
+
+
+/* Readability, compact spacing and alignment corrections from visual review. */
+body{color:#F4F7FC}
+body :is(p,li,.description,.hero-intro,.section-heading p,.subpage-card p,.footer-disclaimer p){
+ color:#D7E2F0!important;
+}
+body :is(.subpage-card h3,.service-card h3,.portfolio-card h3,.blog-card h3,.feature-card h3,.industry-card h3){
+ color:#F8FAFC!important;
+}
+body :is(.subpage-card .num,.subpage-card .num span,.service-card .num){
+ color:#FF7A1A!important;
+}
+body :is(.subpage-card,.service-card,.portfolio-card,.blog-card,.feature-card,.industry-card){
+ background:rgba(20,55,96,.72)!important;
+}
+body :is(.subpage-card p,.service-card p,.portfolio-card p,.blog-card p,.feature-card p,.industry-card p){
+ color:#D7E2F0!important;
+}
+body:not(.inner-page) .hero{grid-template-columns:1fr;justify-items:center;text-align:center;padding-block:44px 54px;min-height:0}
+body:not(.inner-page) .hero-copy{width:min(820px,100%);margin-inline:auto;text-align:center;padding:24px 0 12px}
+body:not(.inner-page) .hero-copy :is(.eyebrow,.hero-actions,.hero-buttons,.hero-ctas){justify-content:center;margin-inline:auto}
+body:not(.inner-page) .hero-copy :is(h1,p){margin-inline:auto;text-align:center}
+body:not(.inner-page) .hero-copy p{max-width:62ch}
+body .site-footer{
+ display:grid!important;grid-template-columns:minmax(180px,1fr) minmax(180px,1fr) minmax(220px,1fr)!important;
+ align-items:center!important;justify-items:stretch!important;text-align:left!important;
+ gap:20px 28px!important;padding-block:28px!important;
+}
+body .site-footer>.footer-brand{justify-self:start!important;grid-column:1}
+body .site-footer>p{justify-self:start!important;text-align:left!important;grid-column:2}
+body .site-footer>.footer-links{justify-self:end!important;grid-column:3;display:flex;justify-content:flex-end!important;flex-wrap:wrap;gap:12px 22px}
+body .site-footer>.footer-disclaimer{grid-column:1/-1!important;width:100%!important;text-align:left!important;margin:0!important}
+body .site-footer>.copyright{grid-column:1/-1!important;text-align:left!important;justify-self:start!important}
+body .site-footer :is(p,small,strong){text-align:left!important}
+body .site-footer .footer-disclaimer p{max-width:100%;margin-top:8px}
+@media(max-width:700px){
+ body:not(.inner-page) .hero{padding-block:28px 36px}
+ body .site-footer{grid-template-columns:1fr!important;gap:14px!important}
+ body .site-footer>.footer-brand,body .site-footer>p,body .site-footer>.footer-links,
+ body .site-footer>.footer-disclaimer,body .site-footer>.copyright{grid-column:1!important;justify-self:start!important}
+ body .site-footer>.footer-links{justify-content:flex-start!important}
+}
