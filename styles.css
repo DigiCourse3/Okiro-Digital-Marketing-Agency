@@ -5400,3 +5400,31 @@ body .about-section .about-orb .about-orb-core{z-index:1}
  body .about-section .about-copy{text-align:center!important}
  body .about-section .about-copy>p{margin-inline:auto!important;text-align:center!important}
 }
+
+
+/* Final logo treatment: medium scale, transparent canvas, clear white copy. */
+body .about-section .about-orb .about-orb-logo{
+ width:180px!important;
+ max-width:64%!important;
+ height:auto!important;
+ max-height:92px!important;
+ padding:0!important;
+ object-fit:contain!important;
+ background:transparent!important;
+ border:0!important;
+ border-radius:0!important;
+ box-shadow:none!important;
+}
+body .about-section .about-copy>p{
+ color:#FFFFFF!important;
+ opacity:1!important;
+ font-size:17px!important;
+ line-height:1.75!important;
+ font-weight:400!important;
+}
+@media(max-width:760px){
+ body .about-section .about-orb .about-orb-logo{
+  width:160px!important;max-width:64%!important;max-height:84px!important;
+ }
+ body .about-section .about-copy>p{color:#FFFFFF!important}
+}
