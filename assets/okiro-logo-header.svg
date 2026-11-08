@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-label="OKIRO Digital Marketing Agency. Create. Connect. Convert.">
-<defs>
- <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#246BFD"/><stop offset=".55" stop-color="#145DA0"/><stop offset="1" stop-color="#081B33"/></linearGradient>
- <linearGradient id="arrow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF8A24"/><stop offset="1" stop-color="#FF6500"/></linearGradient>
-</defs>
-<g transform="translate(10 7)">
- <circle cx="94" cy="94" r="68" fill="none" stroke="url(#ring)" stroke-width="25" stroke-linecap="round" stroke-dasharray="365 65" transform="rotate(-42 94 94)"/>
- <path d="M18 157 C69 150 119 121 153 76 L139 70 L190 42 L187 99 L171 87 C132 143 77 168 18 157Z" fill="url(#arrow)"/>
- <g fill="#FF6500"><rect x="5" y="69" width="12" height="12" rx="1"/><rect x="22" y="51" width="12" height="12" rx="1"/><rect x="23" y="86" width="12" height="12" rx="1"/><rect x="5" y="103" width="12" height="12" rx="1"/></g>
-</g>
-<text x="225" y="112" fill="#FFFFFF" font-family="Space Grotesk,Arial,sans-serif" font-size="104" font-weight="700" letter-spacing="-5">OKIRO</text>
-<path d="M230 137 H705" stroke="#FF6500" stroke-width="3" stroke-linecap="round"/>
-<text x="232" y="169" fill="#DCE7F5" font-family="Space Grotesk,Arial,sans-serif" font-size="25" font-weight="600" letter-spacing="5">DIGITAL MARKETING AGENCY</text>
-<text x="232" y="204" fill="#FFFFFF" font-family="Inter,Arial,sans-serif" font-size="21" font-weight="500" letter-spacing="3">Create. Connect. Convert.</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-label="OKIRO Digital Marketing Agency. Create. Connect. Convert."><defs><linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1768D5"/><stop offset=".58" stop-color="#06449A"/><stop offset="1" stop-color="#061A3A"/></linearGradient><linearGradient id="orange" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FF7A00"/><stop offset="1" stop-color="#FF4D00"/></linearGradient></defs><rect width="1200" height="400" fill="#FFFFFF"/><g transform="translate(34 28)"><path d="M190 38a125 125 0 1 0 110 184" fill="none" stroke="url(#blue)" stroke-width="49" stroke-linecap="round"/><path d="M24 250C112 238 216 185 286 80l-43-20L380 0l-3 132-34-27C258 225 142 277 24 250Z" fill="url(#orange)"/><g fill="#FF5B00"><rect x="0" y="122" width="24" height="24"/><rect x="35" y="86" width="24" height="24"/><rect x="39" y="157" width="24" height="24"/><rect x="4" y="195" width="24" height="24"/></g></g><text x="420" y="230" fill="#061A3A" font-family="Inter,Arial,sans-serif" font-size="205" font-weight="800" letter-spacing="-12">OKIRO</text><path d="M430 263H1150" stroke="#FF6500" stroke-width="7" stroke-linecap="round"/><text x="435" y="316" fill="#061A3A" font-family="Inter,Arial,sans-serif" font-size="45" font-weight="700" letter-spacing="10">DIGITAL MARKETING AGENCY</text><text x="440" y="370" fill="#061A3A" font-family="Inter,Arial,sans-serif" font-size="43" font-style="italic" font-weight="600" letter-spacing="5">Create<tspan fill="#FF6500">.</tspan> Connect<tspan fill="#FF6500">.</tspan> Convert<tspan fill="#FF6500">.</tspan></text></svg>
