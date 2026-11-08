@@ -5428,3 +5428,16 @@ body .about-section .about-copy>p{
  }
  body .about-section .about-copy>p{color:#FFFFFF!important}
 }
+
+
+/* Use the uploaded transparent logo on the about globe. */
+body .about-section .about-orb .about-orb-logo{
+ display:block!important;width:180px!important;max-width:64%!important;
+ height:auto!important;max-height:92px!important;object-fit:contain!important;
+ padding:0!important;background:transparent!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important;
+}
+body .about-section .about-copy>p{color:#FFFFFF!important;opacity:1!important}
+@media(max-width:760px){
+ body .about-section .about-orb .about-orb-logo{width:160px!important;max-height:84px!important}
+}
