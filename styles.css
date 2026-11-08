@@ -4988,3 +4988,33 @@ body .site-header.okiro-header .nav-links .nav-trigger span{
  body input[type=submit],body button[type=submit],body .locations-cta,
  body .cta-button{font-size:15px!important}
 }
+
+
+/* Uniform desktop and mobile primary navigation typography. */
+body .site-header.okiro-header .nav-links,
+body .site-header.okiro-header .nav-links > a,
+body .site-header.okiro-header .nav-links .nav-item > .nav-trigger,
+body .site-header.okiro-header .nav-links .nav-trigger,
+body .site-header.okiro-header .nav-links .nav-trigger span{
+ font-family:'Space Grotesk',Arial,sans-serif!important;
+ font-size:15px!important;
+ font-weight:600!important;
+ font-style:normal!important;
+ line-height:1.2!important;
+ letter-spacing:0!important;
+ text-transform:none!important;
+}
+body .site-header.okiro-header .nav-links .nav-trigger span{
+ display:inline-block;
+ vertical-align:middle;
+ font-size:12px!important;
+ font-weight:600!important;
+ line-height:1!important;
+}
+@media(max-width:700px){
+ body .site-header.okiro-header .nav-links,
+ body .site-header.okiro-header .nav-links > a,
+ body .site-header.okiro-header .nav-links .nav-trigger{
+  font-size:14px!important;
+ }
+}
