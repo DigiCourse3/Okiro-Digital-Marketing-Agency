@@ -5018,3 +5018,143 @@ body .site-header.okiro-header .nav-links .nav-trigger span{
   font-size:14px!important;
  }
 }
+
+
+/* OKIRO site-wide visual polish: consistent spacing, cards, forms and responsive widths. */
+:root{
+ --okiro-navy:#081B33;
+ --okiro-deep:#0B2344;
+ --okiro-blue:#102A56;
+ --okiro-blue-soft:#163D6B;
+ --okiro-orange:#FF6500;
+ --okiro-orange-hover:#E85B00;
+ --okiro-white:#F8FAFC;
+ --okiro-muted:#D7E2F0;
+ --okiro-border:#31527D;
+ --okiro-radius:20px;
+ --okiro-content-width:1200px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background-color:var(--okiro-navy)!important;color:var(--okiro-white)!important}
+body :is(h1,h2,h3,h4,h5,h6){color:var(--okiro-white)!important}
+body :is(p,li,label,.description,.hero-intro,.section-heading p){color:var(--okiro-muted)}
+/* Shared content width and section rhythm */
+body .section-wrap,
+body.inner-page .section-wrap,
+body .page-shell,
+body .page-content,
+body .content-wrap{
+ width:min(var(--okiro-content-width),calc(100% - 64px))!important;
+ max-width:var(--okiro-content-width)!important;
+ margin-inline:auto!important;
+}
+body.inner-page main>section:not(.page-hero):not(.service-page-hero){
+ padding-block:clamp(64px,7vw,96px)!important;
+}
+body.inner-page .page-hero,
+body.inner-page .service-page-hero{
+ padding-block:clamp(64px,8vw,108px)!important;
+}
+body:not(.inner-page) main>section{
+ padding-block:clamp(64px,7vw,104px);
+}
+body .section-heading{gap:32px;margin-bottom:clamp(28px,4vw,48px)}
+body .section-heading h2,
+body .page-hero h1,
+body .page-hero h2{max-width:900px;text-wrap:balance}
+body p{max-width:75ch}
+body .section-heading>p{max-width:52ch}
+/* One shared card language */
+body :is(.service-card,.service-note,.work-card,.testimonial-card,.industry-card,
+.subpage-card,.portfolio-card,.blog-card,.feature-card,.process-card,
+.contact-panel,.contact-form,.contact-form-wrap,.feature-box,.stat-box,.service-box){
+ border:1px solid var(--okiro-border)!important;
+ border-radius:var(--okiro-radius)!important;
+ box-shadow:0 14px 36px rgba(0,0,0,.16)!important;
+}
+body :is(.service-card,.subpage-card,.portfolio-card,.blog-card,.feature-card,.process-card){
+ padding:clamp(20px,2.4vw,30px)!important;
+}
+body :is(.service-card,.subpage-card,.portfolio-card,.blog-card,.feature-card,.process-card):hover{
+ border-color:rgba(255,138,36,.72)!important;
+ transform:translateY(-3px);
+ transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+body :is(.subpage-grid,.services-grid,.portfolio-grid,.blog-grid,.feature-grid){
+ gap:clamp(16px,2vw,24px)!important;
+}
+body .subpage-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+/* Consistent orange actions and legible form controls */
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button,.locations-cta){
+ background:var(--okiro-orange)!important;
+ color:#fff!important;-webkit-text-fill-color:#fff!important;
+ border:1px solid var(--okiro-orange)!important;
+ border-radius:999px!important;
+ font-weight:600!important;
+ box-shadow:0 8px 22px rgba(255,101,0,.18)!important;
+}
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button,.locations-cta):hover{
+ background:var(--okiro-orange-hover)!important;border-color:var(--okiro-orange-hover)!important;
+}
+body :is(input,select,textarea){
+ border:1px solid #42658F!important;border-radius:10px!important;
+ background:#081B33!important;color:#F8FAFC!important;
+ font:400 15px/1.5 'Inter',Arial,sans-serif!important;
+}
+body :is(input,select,textarea)::placeholder{color:#AFC1D8!important;opacity:1!important}
+body label{font:500 14px/1.45 'Inter',Arial,sans-serif!important;color:#F1F6FC!important}
+body :is(.contact-form,.contact-panel,.project-modal-dialog){
+ background:linear-gradient(145deg,#102A56,#0B2344)!important;
+ border-color:#31527D!important;
+}
+/* Keep the uploaded PNG logo crisp and correctly contained. */
+body .site-header.okiro-header .brand-image{
+ display:flex!important;align-items:center!important;
+ width:190px!important;height:68px!important;flex:0 0 auto!important;
+}
+body .site-header.okiro-header .brand-image img{
+ display:block!important;width:100%!important;height:100%!important;
+ max-width:100%!important;max-height:68px!important;object-fit:contain!important;
+ background:transparent!important;
+}
+body .site-footer .footer-brand img{
+ display:block!important;width:100%!important;height:auto!important;
+ max-width:240px!important;max-height:100px!important;object-fit:contain!important;
+ background:transparent!important;
+}
+/* Consistent footer treatment */
+body .site-footer,body footer.site-footer{
+ background:#081B33!important;color:#D7E2F0!important;
+ border-top:1px solid #31527D!important;
+}
+body .site-footer :is(a,strong,b,h1,h2,h3,h4){color:#F8FAFC!important}
+body .site-footer a:hover{color:#FF9A3D!important}
+/* Prevent narrow content and cramped columns on tablets and phones. */
+@media(max-width:900px){
+ body .section-wrap,body.inner-page .section-wrap,body .page-shell,
+ body .page-content,body .content-wrap{
+  width:min(100% - 48px,760px)!important;
+ }
+ body .section-heading{align-items:flex-start}
+}
+@media(max-width:700px){
+ body .section-wrap,body.inner-page .section-wrap,body .page-shell,
+ body .page-content,body .content-wrap{
+  width:calc(100% - 36px)!important;
+ }
+ body.inner-page main>section:not(.page-hero):not(.service-page-hero),
+ body:not(.inner-page) main>section{padding-block:56px!important}
+ body .site-header.okiro-header .brand-image{width:148px!important;height:52px!important}
+ body .site-header.okiro-header .brand-image img{max-height:52px!important}
+ body .section-heading{display:block!important}
+ body .section-heading>p{margin-top:16px!important}
+ body :is(.subpage-grid,.services-grid,.portfolio-grid,.blog-grid,.feature-grid){
+  grid-template-columns:1fr!important;
+ }
+ body :is(.contact-panel,.contact-form){padding:22px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body :is(.service-card,.subpage-card,.portfolio-card,.blog-card,.feature-card,.process-card){transition:none!important}
+}
