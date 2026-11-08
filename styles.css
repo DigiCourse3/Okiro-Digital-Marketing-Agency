@@ -4627,3 +4627,176 @@ html,body,body *,
 button,input,select,textarea{
  font-family:'Manrope',Arial,sans-serif!important;
 }
+
+
+/* NOV 08 FINAL REPAIR: remove every legacy brown/gold homepage override,
+   restore desktop WhatsApp/Call controls, and apply the navy palette on mobile. */
+:root{
+ --bg:#081B33!important;--panel:#102A56!important;--panel2:#163D6B!important;
+ --line:rgba(92,139,194,.38)!important;--text:#F8FAFC!important;
+ --muted:#D7E2F0!important;--red:#FF6500!important;--coral:#FF8A24!important;
+ --okiro-navy:#081B33!important;--okiro-deep:#0B2344!important;
+ --okiro-blue:#102A56!important;--okiro-blue-light:#163D6B!important;
+ --okiro-orange:#FF6500!important;--okiro-border:#31527D!important;
+}
+html,body,body:not(.inner-page),body.inner-page{
+ background-color:#081B33!important;color:#F8FAFC!important;
+ background-image:radial-gradient(ellipse at 78% 4%,rgba(20,93,160,.22),transparent 38%),linear-gradient(145deg,#081B33 0%,#0B2344 55%,#081B33 100%)!important;
+}
+/* The old GOLDEN SERENITY rules explicitly painted these full-width bands brown.
+   Set the complete section surface, not just the centered inner container. */
+body:not(.inner-page) main,
+body:not(.inner-page) main>section,
+body:not(.inner-page) main>div:not(.project-modal-overlay),
+body:not(.inner-page) main>.hero,
+body:not(.inner-page) main>.marquee-band,
+body:not(.inner-page) main>.client-strip,
+body:not(.inner-page) main>.industry-section,
+body:not(.inner-page) main>.services-section,
+body:not(.inner-page) main>.work-section,
+body:not(.inner-page) main>.approach-section,
+body:not(.inner-page) main>.process-section,
+body:not(.inner-page) main>.locations-section,
+body:not(.inner-page) main>.testimonials-section,
+body:not(.inner-page) main>.about-section,
+body:not(.inner-page) main>.faq-section,
+body:not(.inner-page) main>.contact-section,
+body:not(.inner-page) main>.cta-section,
+body:not(.inner-page) main>.subpage-section{
+ background:#0B2344!important;
+ background-image:linear-gradient(135deg,#081B33 0%,#0B2344 52%,#102A56 100%)!important;
+ color:#F8FAFC!important;border-color:rgba(92,139,194,.38)!important;
+}
+body:not(.inner-page) main>.hero{
+ background-image:radial-gradient(ellipse at 78% 38%,rgba(20,93,160,.30),transparent 44%),linear-gradient(110deg,#081B33 0%,#0B2344 55%,#102A56 100%)!important;
+}
+body:not(.inner-page) main>.marquee-band{
+ background:#0B2344!important;border-block:1px solid #31527D!important;
+}
+body:not(.inner-page) main>.client-strip{
+ background:linear-gradient(110deg,#081B33,#102A56,#081B33)!important;
+}
+body:not(.inner-page) main>.industry-section,
+body:not(.inner-page) main>.approach-section,
+body:not(.inner-page) main>.locations-section,
+body:not(.inner-page) main>.testimonials-section,
+body:not(.inner-page) main>.about-section,
+body:not(.inner-page) main>.faq-section{
+ background:linear-gradient(135deg,#081B33 0%,#0B2344 55%,#102A56 100%)!important;
+}
+/* Inner pages: remove any brown page shell and give all major sections a navy surface. */
+body.inner-page main,
+body.inner-page main>section,
+body.inner-page main>div:not(.project-modal-overlay),
+body.inner-page .page-shell,body.inner-page .page-content,
+body.inner-page .content-wrap,body.inner-page .section-wrap{
+ background-color:transparent!important;color:#F8FAFC!important;
+}
+body.inner-page main>section:not(.page-hero):not(.service-page-hero){
+ background-image:linear-gradient(135deg,#081B33 0%,#0B2344 55%,#102A56 100%)!important;
+ border-color:rgba(92,139,194,.38)!important;
+}
+body.inner-page .page-hero,body.inner-page .service-page-hero{
+ background:radial-gradient(ellipse at 80% 12%,rgba(20,93,160,.32),transparent 48%),linear-gradient(125deg,#06152E,#103D79 58%,#0B2344)!important;
+}
+/* Cards stay a lighter blue; all formerly brown card variants are covered. */
+body :is(.service-card,.service-note,.work-card,.testimonial-card,.industry-card,
+.industry-cta,.industry-detail-art,.subpage-card,.feature-card,.process-card,
+.portfolio-card,.blog-card,.aeo-related-mini,.aeo-related-card,.aeo-faq-item,
+.faq-item,.service-steps article,.float-card,.contact-panel,.contact-form,
+.project-modal-dialog,.project-modal-form,.locations-list span,.work-meta,
+.contact-form-wrap,.feature-box,.stat-box,.service-box){
+ background:linear-gradient(145deg,#163D6B 0%,#102A56 100%)!important;
+ background-color:#102A56!important;color:#F8FAFC!important;
+ border-color:#31527D!important;
+}
+body :is(h1,h2,h3,h4,h5,h6,.section-heading h2,.industry-heading h2,
+.approach-copy h2,.locations-heading h2,.testimonials-heading h2,.faq-heading h2){
+ color:#F8FAFC!important;
+}
+body :is(p,li,label,small,.hero-intro,.section-heading p,.industry-heading p,
+.approach-copy p,.locations-copy p,.testimonial-card p,.faq-item p,
+.float-card small,.float-card strong,.float-card b){
+ color:#D7E2F0!important;
+}
+body .float-card{
+ background:linear-gradient(145deg,#102A56 0%,#081B33 100%)!important;
+ border:1px solid #42658F!important;box-shadow:0 18px 40px rgba(0,0,0,.35)!important;
+}
+body .float-card small{color:#D7E2F0!important;font-size:10px!important}
+body .float-card strong{color:#FFFFFF!important;font-size:13px!important;line-height:1.35!important}
+body .float-card b{color:#FF9A3D!important;font-size:10px!important}
+body .mini-icon{background:rgba(255,101,0,.18)!important;color:#FF9A3D!important}
+body .visual-caption{color:#D7E2F0!important}
+/* Orange actions must always have readable white labels, including small/mobile buttons. */
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button,
+.locations-section .button,.locations-section a.button){
+ background:#FF6500!important;background-image:none!important;
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ border:1px solid #FF6500!important;
+}
+body :is(.button-primary,.submit-button,.project-modal-submit,.header-cta,
+button[type=submit],input[type=submit],.btn-primary,.cta-button,
+.locations-section .button,.locations-section a.button) *{
+ color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+}
+body :is(.button-outline,.button:not(.button-primary)){
+ background:#0B2344!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;
+ border:1px solid #5B83B2!important;
+}
+/* Restore desktop floating WhatsApp and Call icons. They were hidden by an old homepage rule. */
+body:not(.inner-page) .okiro-contact-actions,
+body:not(.inner-page) .okiro-contact-actions a{
+ display:flex!important;visibility:visible!important;opacity:1!important;
+}
+.okiro-contact-actions{
+ position:fixed!important;right:18px!important;bottom:20px!important;z-index:4000!important;
+ flex-direction:column!important;gap:10px!important;
+}
+.okiro-contact-actions a{
+ width:52px!important;height:52px!important;min-width:52px!important;max-width:52px!important;
+ padding:0!important;border-radius:15px!important;background:#145DA0!important;
+ border:1px solid #2D75B8!important;color:#FFFFFF!important;
+ align-items:center!important;justify-content:center!important;
+}
+.okiro-contact-actions a:hover{background:#FF6500!important}
+.okiro-contact-actions svg{width:25px!important;height:25px!important;color:#FFFFFF!important;display:block!important}
+.okiro-contact-actions a span{display:none!important}
+/* Footer and mobile fixed contact bar use the same navy/blue system. */
+body .site-footer,body:not(.inner-page) .site-footer,
+body .site-footer .footer-main,body .site-footer .footer-bottom{
+ background:#06152E!important;background-image:none!important;
+ border-color:#31527D!important;color:#D7E2F0!important;
+}
+body .site-footer *{color:#D7E2F0!important}
+body .site-footer :is(h1,h2,h3,h4,h5,h6,strong,b,a){color:#F8FAFC!important}
+.okiro-mobile-contact-bar{
+ background:#0B2344!important;background-image:none!important;
+ border-top:1px solid #31527D!important;
+}
+.okiro-mobile-contact-bar a{
+ background:transparent!important;color:#FFFFFF!important;
+ -webkit-text-fill-color:#FFFFFF!important;border-color:#31527D!important;
+}
+.okiro-mobile-contact-bar a svg,.okiro-mobile-contact-bar a i{
+ color:#FF9A3D!important;fill:currentColor!important;
+}
+@media(max-width:700px){
+ html,body,body:not(.inner-page),body.inner-page{background:#081B33!important}
+ body:not(.inner-page) main>.hero{
+  background:radial-gradient(ellipse at 78% 38%,rgba(20,93,160,.28),transparent 44%),linear-gradient(110deg,#081B33,#0B2344 55%,#102A56)!important;
+ }
+ body:not(.inner-page) main>section,
+ body:not(.inner-page) main>div:not(.project-modal-overlay){
+  background:linear-gradient(135deg,#081B33,#0B2344 55%,#102A56)!important;
+ }
+ body:not(.inner-page) .okiro-social-rail{display:flex!important}
+ body:not(.inner-page) .okiro-contact-actions{display:none!important}
+ .okiro-mobile-contact-bar{
+  display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  background:#0B2344!important;border-top:1px solid #31527D!important;
+ }
+ .okiro-mobile-contact-bar a{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+ .okiro-mobile-contact-bar a svg{color:#FF9A3D!important}
+}
