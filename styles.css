@@ -5374,3 +5374,29 @@ body .approach-section .text-link:visited{
 }
 body .approach-section .text-link span{color:#FF8A24!important}
 body .approach-section .text-link:hover{color:#FFB15C!important}
+
+
+/* About section: make copy readable and place the official logo on the globe. */
+body .about-section .about-copy>p{
+ color:#E2EAF5!important;opacity:1!important;
+ font-family:'Inter',Arial,sans-serif!important;
+ font-size:17px!important;line-height:1.75!important;
+ font-weight:400!important;max-width:560px!important;
+}
+body .about-section .about-copy h2{color:#F8FAFC!important}
+body .about-section .about-orb{isolation:isolate}
+body .about-section .about-orb .about-orb-logo{
+ position:relative!important;z-index:3!important;display:block!important;
+ width:min(72%,230px)!important;height:auto!important;max-height:118px!important;
+ object-fit:contain!important;padding:10px 12px!important;
+ background:#FFFFFF!important;border-radius:8px!important;
+ box-shadow:0 10px 35px rgba(0,0,0,.32),0 0 24px rgba(255,255,255,.12)!important;
+}
+body .about-section .about-orb .about-orb-core{z-index:1}
+@media(max-width:760px){
+ body .about-section{padding:56px 0 64px!important}
+ body .about-layout{grid-template-columns:1fr!important;gap:42px!important}
+ body .about-orb{width:min(290px,72vw)!important;height:min(290px,72vw)!important}
+ body .about-section .about-copy{text-align:center!important}
+ body .about-section .about-copy>p{margin-inline:auto!important;text-align:center!important}
+}
