@@ -5461,3 +5461,22 @@ body .about-section .about-orb .about-orb-logo{
 @media(max-width:760px){
  body .about-section .about-orb .about-orb-logo{width:160px!important;max-height:84px!important}
 }
+
+
+/* Homepage orbital artwork: remove the brown/black panel and blend into site navy. */
+body:not(.inner-page) main>.hero .hero-visual{
+ background:#081B33!important;
+ background-image:none!important;
+}
+body:not(.inner-page) main>.hero .hero-visual:before,
+body:not(.inner-page) main>.hero .hero-visual:after{
+ content:none!important;
+ display:none!important;
+ background:none!important;
+ box-shadow:none!important;
+}
+body:not(.inner-page) main>.hero .visual-grid{
+ background-image:
+  linear-gradient(rgba(140,162,218,.035) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(140,162,218,.035) 1px,transparent 1px)!important;
+}
