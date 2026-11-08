@@ -5480,3 +5480,26 @@ body:not(.inner-page) main>.hero .visual-grid{
   linear-gradient(rgba(140,162,218,.035) 1px,transparent 1px),
   linear-gradient(90deg,rgba(140,162,218,.035) 1px,transparent 1px)!important;
 }
+
+
+/* FINAL FIX: remove the remaining brown/black homepage hero rectangle.
+   Keep the orbital artwork and floating cards unchanged. */
+body:not(.inner-page) main > .hero,
+body:not(.inner-page) main > .hero::before,
+body:not(.inner-page) main > .hero::after {
+  background: #081B33 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+body:not(.inner-page) main > .hero {
+  background: linear-gradient(145deg, #081B33 0%, #0B2344 55%, #081B33 100%) !important;
+}
+body:not(.inner-page) main > .hero .hero-visual {
+  background: transparent !important;
+  background-image: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual::before,
+body:not(.inner-page) main > .hero .hero-visual::after {
+  content: none !important;
+  display: none !important;
+}
