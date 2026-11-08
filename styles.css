@@ -4800,3 +4800,81 @@ body .site-footer :is(h1,h2,h3,h4,h5,h6,strong,b,a){color:#F8FAFC!important}
  .okiro-mobile-contact-bar a{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
  .okiro-mobile-contact-bar a svg{color:#FF9A3D!important}
 }
+
+
+/* NOV 08 OVERRIDE: last-loaded site shell and contact controls. */
+html,html body,body,body:before,body:after{
+ background-color:#081B33!important;
+}
+body{
+ background-image:linear-gradient(135deg,#081B33 0%,#0B2344 58%,#081B33 100%)!important;
+ color:#F8FAFC!important;
+}
+body:not(.inner-page) main,
+body:not(.inner-page) main>section,
+body:not(.inner-page) main>div,
+body.inner-page main,
+body.inner-page main>section,
+body.inner-page main>div{
+ background-color:transparent!important;
+ color:#F8FAFC!important;
+}
+body:not(.inner-page) main>section,
+body.inner-page main>section:not(.page-hero):not(.service-page-hero){
+ background-image:linear-gradient(135deg,#081B33 0%,#0B2344 58%,#102A56 100%)!important;
+}
+body:not(.inner-page) main>.hero{
+ background-image:radial-gradient(ellipse at 75% 35%,rgba(20,93,160,.28),transparent 45%),linear-gradient(110deg,#081B33 0%,#0B2344 58%,#102A56 100%)!important;
+}
+body:not(.inner-page) main>.section-wrap,
+body:not(.inner-page) main>section.section-wrap{
+ background-color:transparent!important;
+}
+body:not(.inner-page) .site-footer,
+body:not(.inner-page) footer.site-footer,
+body .site-footer{
+ background:#06152E!important;background-image:none!important;
+ border-top:1px solid #31527D!important;color:#F8FAFC!important;
+}
+body .site-footer *{color:#D7E2F0!important}
+body .site-footer a,body .site-footer strong{color:#FFFFFF!important}
+/* Do not hide the desktop call/WhatsApp shortcuts behind the social rail. */
+@media(min-width:701px){
+ body:not(.inner-page) .okiro-contact-actions,
+ body .okiro-contact-actions{
+  display:flex!important;visibility:visible!important;opacity:1!important;
+  position:fixed!important;right:20px!important;bottom:22px!important;
+  z-index:99999!important;flex-direction:column!important;gap:12px!important;
+  pointer-events:auto!important;
+ }
+ body .okiro-contact-actions a{
+  display:flex!important;visibility:visible!important;opacity:1!important;
+  width:50px!important;height:50px!important;min-width:50px!important;
+  padding:0!important;align-items:center!important;justify-content:center!important;
+  border-radius:50%!important;background:#145DA0!important;
+  border:1px solid #6AA3D5!important;color:#FFFFFF!important;
+ }
+ body .okiro-contact-actions svg{
+  display:block!important;width:25px!important;height:25px!important;
+  fill:currentColor!important;color:#FFFFFF!important;
+ }
+}
+/* The mobile four-action bar is navy, with white labels and orange icons. */
+@media(max-width:700px){
+ body,html{background:#081B33!important}
+ body .okiro-mobile-contact-bar{
+  display:grid!important;background:#0B2344!important;background-image:none!important;
+  border-top:1px solid #42658F!important;box-shadow:0 -8px 24px rgba(0,0,0,.2)!important;
+ }
+ body .okiro-mobile-contact-bar a{
+  background:transparent!important;color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;border-color:#31527D!important;
+ }
+ body .okiro-mobile-contact-bar a span,
+ body .okiro-mobile-contact-bar a strong{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+ body .okiro-mobile-contact-bar svg,
+ body .okiro-mobile-contact-bar i{
+  color:#FF9A3D!important;fill:currentColor!important;stroke:currentColor!important;
+ }
+ body .okiro-contact-actions{display:none!important}
+}
