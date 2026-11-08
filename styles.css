@@ -5353,3 +5353,24 @@ body .brand-slogan,body .about-orb-label{display:none!important}
  body .site-footer>.footer-links{justify-content:flex-start!important;gap:10px 16px!important}
  body .site-footer>.footer-disclaimer p{text-align:left!important}
 }
+
+
+/* Homepage approach section: restore readable contrast and make CTA open enquiry modal. */
+body .approach-section .approach-copy>p,
+body .approach-section .step p{
+ color:#D7E2F0!important;
+ opacity:1!important;
+}
+body .approach-section .approach-copy h2,
+body .approach-section .step h3{color:#F8FAFC!important}
+body .approach-section .step-no{color:#FF8A24!important}
+body .approach-section .step-icon{color:#FF8A24!important}
+body .approach-section .text-link,
+body .approach-section a.text-link,
+body .approach-section .text-link:visited{
+ color:#FFFFFF!important;opacity:1!important;
+ font-size:15px!important;font-weight:700!important;
+ text-decoration:none!important;
+}
+body .approach-section .text-link span{color:#FF8A24!important}
+body .approach-section .text-link:hover{color:#FFB15C!important}
