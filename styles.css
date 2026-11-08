@@ -5441,3 +5441,23 @@ body .about-section .about-copy>p{color:#FFFFFF!important;opacity:1!important}
 @media(max-width:760px){
  body .about-section .about-orb .about-orb-logo{width:160px!important;max-height:84px!important}
 }
+
+
+/* Keep original header logo, use transparent mark only on the about globe. */
+body .site-header.okiro-header .brand-image{width:142px!important;height:58px!important}
+body .site-header.okiro-header .brand-image img{
+ width:100%!important;height:100%!important;max-height:54px!important;
+ object-fit:contain!important;background:transparent!important;
+}
+@media(max-width:700px){
+ body .site-header.okiro-header .brand-image{width:116px!important;height:46px!important}
+ body .site-header.okiro-header .brand-image img{max-height:42px!important}
+}
+body .about-section .about-orb .about-orb-logo{
+ width:180px!important;max-width:64%!important;max-height:92px!important;
+ padding:0!important;background:transparent!important;border:0!important;
+ border-radius:0!important;box-shadow:none!important;object-fit:contain!important;
+}
+@media(max-width:760px){
+ body .about-section .about-orb .about-orb-logo{width:160px!important;max-height:84px!important}
+}
