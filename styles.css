@@ -5643,9 +5643,14 @@ body:not(.inner-page) main > .hero .hero-visual > .float-card {
     width: min(108%, 440px) !important;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
-    animation: none !important;
-    transform: translate(-50%, -50%) !important;
-  }
+
+
+
+/* Keep the requested globe rotation active even when the device requests reduced motion. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+  animation-name: okiro-globe-visible-spin !important;
+  animation-duration: 24s !important;
+  animation-timing-function: linear !important;
+  animation-iteration-count: infinite !important;
+  animation-play-state: running !important;
 }
