@@ -311,3 +311,31 @@ window.okiroSubmitLead = async function (form, feedback, source) {
 
 /* Okiro golden-theme trust strip. Existing page content and forms remain unchanged. */
 (function(){function addTrust(){var hero=document.querySelector('main > .hero');if(!hero||document.querySelector('.okiro-golden-trust'))return;var strip=document.createElement('section');strip.className='okiro-golden-trust';strip.setAttribute('aria-label','Okiro approach');strip.innerHTML='<div class="okiro-golden-trust__inner"><span>STRATEGY-LED CAMPAIGNS</span><span>PERFORMANCE-FOCUSED EXECUTION</span><span>CLEAR REPORTING</span><span>BUILT AROUND YOUR GOALS</span></div>';hero.insertAdjacentElement('afterend',strip);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addTrust,{once:true});else addTrust();})();
+
+
+/* v16: drive the homepage globe rotation directly from JavaScript.
+   Inline important styles intentionally override the conflicting legacy CSS rules. */
+(() => {
+  const startGlobeRotation = () => {
+    const globe = document.querySelector('body:not(.inner-page) main > .hero .hero-visual .hero-globe-spin-wrap > img.hero-globe-art');
+    if (!globe || globe.dataset.okiroJsRotation === 'active') return;
+    globe.dataset.okiroJsRotation = 'active';
+    globe.style.setProperty('transform-origin', '50% 50%', 'important');
+    globe.style.setProperty('animation', 'none', 'important');
+    globe.style.setProperty('transition', 'none', 'important');
+    globe.style.setProperty('rotate', 'none', 'important');
+    const duration = 24000;
+    const frame = (now) => {
+      if (!globe.isConnected) return;
+      const angle = ((now % duration) / duration) * 360;
+      globe.style.setProperty('transform', 'rotate(' + angle.toFixed(3) + 'deg)', 'important');
+      window.requestAnimationFrame(frame);
+    };
+    window.requestAnimationFrame(frame);
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startGlobeRotation, { once: true });
+  } else {
+    startGlobeRotation();
+  }
+})();
