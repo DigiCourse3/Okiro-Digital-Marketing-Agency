@@ -6226,3 +6226,20 @@ body:not(.inner-page) main > section .section-heading h2 {
     margin-bottom: 20px !important;
   }
 }
+
+
+/* v24: reduce vertical height of the homepage services marquee band only. */
+body:not(.inner-page) main > .marquee-band {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 18px 0 !important;
+}
+body:not(.inner-page) main > .marquee-band .marquee-track {
+  min-height: 0 !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .marquee-band {
+    padding: 14px 0 !important;
+  }
+}
