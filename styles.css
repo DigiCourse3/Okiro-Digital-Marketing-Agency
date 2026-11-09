@@ -6204,3 +6204,25 @@ body footer.site-footer > a.footer-brand.brand-image img {
     max-width: 132px !important;
   }
 }
+
+
+/* v23: tighten vertical rhythm between homepage sections only. */
+body:not(.inner-page) main > section:not(.hero):not(.marquee-band):not(.client-strip) {
+  padding-top: clamp(34px, 4vw, 48px) !important;
+  padding-bottom: clamp(34px, 4vw, 48px) !important;
+}
+body:not(.inner-page) main > section .section-heading {
+  margin-bottom: clamp(20px, 2.6vw, 30px) !important;
+}
+body:not(.inner-page) main > section .section-heading h2 {
+  margin-top: 10px !important;
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > section:not(.hero):not(.marquee-band):not(.client-strip) {
+    padding-top: 30px !important;
+    padding-bottom: 32px !important;
+  }
+  body:not(.inner-page) main > section .section-heading {
+    margin-bottom: 20px !important;
+  }
+}
