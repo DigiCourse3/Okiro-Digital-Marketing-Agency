@@ -5798,3 +5798,16 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
   from { rotate: 0deg; }
   to { rotate: 360deg; }
 }
+
+
+/* FIX v12: do not lock the rotate property with !important.
+   The previous rotate:0deg !important cancelled the keyframe animation. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  animation: okiro-globe-actual-rotation-v12 24s linear infinite !important;
+  animation-play-state: running !important;
+  rotate: 0deg;
+}
+@keyframes okiro-globe-actual-rotation-v12 {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
