@@ -5562,3 +5562,45 @@ body:not(.inner-page) main > .hero .hero-visual > .orbit-c {
     animation: none !important;
   }
 }
+
+
+/* Homepage: use the uploaded realistic Earth artwork on the existing navy background. */
+body:not(.inner-page) main > .hero .hero-visual {
+  background: transparent !important;
+  background-image: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .visual-grid,
+body:not(.inner-page) main > .hero .hero-visual > .orbit,
+body:not(.inner-page) main > .hero .hero-visual > .planet {
+  display: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: min(100%, 520px) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+  transform: translate(-50%, -50%) !important;
+  mix-blend-mode: screen !important;
+  filter: brightness(1.12) contrast(1.08) saturate(1.08) !important;
+  animation: okiro-real-globe-spin 24s linear infinite !important;
+  transform-origin: center center !important;
+  will-change: transform;
+  z-index: 2 !important;
+}
+@keyframes okiro-real-globe-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+    width: min(108%, 440px) !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+    animation: none !important;
+  }
+}
