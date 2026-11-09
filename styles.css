@@ -5578,7 +5578,7 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
   position: absolute !important;
   left: 50% !important;
   top: 50% !important;
-  width: min(100%, 520px) !important;
+  width: min(100%, 420px) !important;
   height: auto !important;
   aspect-ratio: 1 / 1 !important;
   object-fit: contain !important;
@@ -5596,7 +5596,7 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
 }
 @media (max-width: 760px) {
   body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
-    width: min(108%, 440px) !important;
+    width: min(100%, 340px) !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -5905,5 +5905,18 @@ body:not(.inner-page) main > .hero .hero-visual > .float-card {
 @media (max-width: 760px) {
   body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
     width: min(108%, 440px) !important;
+  }
+}
+
+
+/* v18: slightly smaller Earth to balance the homepage hero composition. */
+@media (min-width: 761px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+    width: min(100%, 420px) !important;
+  }
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+    width: min(100%, 340px) !important;
   }
 }
