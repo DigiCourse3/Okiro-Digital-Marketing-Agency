@@ -5526,3 +5526,39 @@ body:not(.inner-page) main > .hero .hero-visual .planet {
     transform: none !important;
   }
 }
+
+
+/* Rotate the surrounding orbital paths with the homepage globe. */
+body:not(.inner-page) main > .hero .hero-visual > .orbit {
+  animation-duration: 16s !important;
+  animation-timing-function: linear !important;
+  animation-iteration-count: infinite !important;
+  transform-origin: center center !important;
+  will-change: transform;
+}
+body:not(.inner-page) main > .hero .hero-visual > .orbit-a {
+  animation-name: okiro-orbit-a-spin !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .orbit-b {
+  animation-name: okiro-orbit-b-spin !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .orbit-c {
+  animation-name: okiro-orbit-c-spin !important;
+}
+@keyframes okiro-orbit-a-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes okiro-orbit-b-spin {
+  from { transform: rotate(53deg); }
+  to   { transform: rotate(413deg); }
+}
+@keyframes okiro-orbit-c-spin {
+  from { transform: rotate(-33deg); }
+  to   { transform: rotate(327deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not(.inner-page) main > .hero .hero-visual > .orbit {
+    animation: none !important;
+  }
+}
