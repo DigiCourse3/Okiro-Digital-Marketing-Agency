@@ -5811,3 +5811,23 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
   from { rotate: 0deg; }
   to { rotate: 360deg; }
 }
+
+
+/* v13: animate the IMG itself. The wrapper only positions it.
+   This avoids all previous wrapper rotate/transform overrides. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  transform: translate(-50%, -50%) !important;
+  rotate: none !important;
+  animation: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
+  transform: rotate(0deg) !important;
+  transform-origin: 50% 50% !important;
+  animation: okiro-globe-image-spin-v13 24s linear infinite !important;
+  animation-play-state: running !important;
+  will-change: transform;
+}
+@keyframes okiro-globe-image-spin-v13 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
