@@ -5767,3 +5767,19 @@ body:not(.inner-page) main > .hero .hero-visual > .float-card {
     width: min(108%, 440px) !important;
   }
 }
+
+
+/* v9: animate the existing globe wrapper, not the image element. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  animation: okiro-globe-wrapper-spin-v9 24s linear infinite !important;
+  animation-play-state: running !important;
+  transform-origin: center center !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > .hero-globe-art {
+  animation: none !important;
+  transform: none !important;
+}
+@keyframes okiro-globe-wrapper-spin-v9 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
