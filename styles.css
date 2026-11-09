@@ -5604,3 +5604,48 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
     animation: none !important;
   }
 }
+
+
+/* 09 Nov 2026: force the uploaded homepage globe to render above the visual background. */
+body:not(.inner-page) main > .hero .hero-visual {
+  position: relative !important;
+  isolation: isolate !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: min(100%, 520px) !important;
+  height: auto !important;
+  max-width: none !important;
+  aspect-ratio: 1 / 1 !important;
+  object-fit: contain !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  animation: okiro-globe-visible-spin 24s linear infinite !important;
+  transform-origin: center center !important;
+  z-index: 1 !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .float-card {
+  position: absolute !important;
+  z-index: 3 !important;
+}
+@keyframes okiro-globe-visible-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+    width: min(108%, 440px) !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
+    animation: none !important;
+    transform: translate(-50%, -50%) !important;
+  }
+}
