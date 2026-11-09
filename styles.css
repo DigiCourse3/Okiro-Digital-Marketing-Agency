@@ -5678,3 +5678,45 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-art {
 body:not(.inner-page) main > .hero .hero-visual > .float-card {
   z-index: 3 !important;
 }
+
+
+/* 09 Nov 2026: spin the image from a clean wrapper so legacy image transforms cannot cancel rotation. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: min(100%, 520px) !important;
+  aspect-ratio: 1 / 1 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translate(-50%, -50%) rotate(0deg) !important;
+  transform-origin: center center !important;
+  animation: okiro-globe-wrapper-spin-v7 24s linear infinite !important;
+  animation-play-state: running !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > .hero-globe-art {
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  transform: none !important;
+  rotate: none !important;
+  animation: none !important;
+  mix-blend-mode: screen !important;
+  background: transparent !important;
+  filter: brightness(1.15) contrast(1.1) saturate(1.1) !important;
+}
+@keyframes okiro-globe-wrapper-spin-v7 {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+    width: min(108%, 440px) !important;
+  }
+}
