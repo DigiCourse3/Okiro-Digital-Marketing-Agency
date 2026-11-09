@@ -5506,19 +5506,23 @@ body:not(.inner-page) main > .hero .hero-visual::after {
 
 
 
-/* Homepage globe: retain the original floating motion and add a full 360-degree rotation. */
-body:not(.inner-page) main > .hero .planet {
-  animation: float 7s ease-in-out infinite, okiro-planet-rotation 36s linear infinite !important;
-  transform-origin: 50% 50%;
-  will-change: rotate;
+/* Reliable homepage globe rotation: one transform animation handles both
+   the 360-degree spin and the original gentle floating movement. */
+body:not(.inner-page) main > .hero .hero-visual .planet {
+  animation: okiro-globe-spin-float 16s linear infinite !important;
+  transform-origin: center center !important;
+  will-change: transform;
 }
-@keyframes okiro-planet-rotation {
-  from { rotate: 0deg; }
-  to { rotate: 360deg; }
+@keyframes okiro-globe-spin-float {
+  0%   { transform: translateY(0) rotate(0deg); }
+  25%  { transform: translateY(-10px) rotate(90deg); }
+  50%  { transform: translateY(0) rotate(180deg); }
+  75%  { transform: translateY(10px) rotate(270deg); }
+  100% { transform: translateY(0) rotate(360deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-  body:not(.inner-page) main > .hero .planet {
+  body:not(.inner-page) main > .hero .hero-visual .planet {
     animation: none !important;
-    rotate: 0deg !important;
+    transform: none !important;
   }
 }
