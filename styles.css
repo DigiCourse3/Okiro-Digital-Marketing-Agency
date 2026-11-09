@@ -5846,3 +5846,64 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.he
   from { rotate: 0deg; }
   to { rotate: 360deg; }
 }
+
+
+/* v17: real 3D Earth canvas; orbital rings remain fixed around it. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: min(100%, 520px) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  transform: translate(-50%, -50%) !important;
+  animation: none !important;
+  rotate: none !important;
+  overflow: visible !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body:not(.inner-page) main > .hero .hero-visual .okiro-earth-3d {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 2;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap::before,
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 132%;
+  height: 42%;
+  border: 1.5px solid rgba(89, 230, 255, .82);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(55, 218, 255, .32), inset 0 0 8px rgba(55, 218, 255, .12);
+  transform: translate(-50%, -50%) rotate(-18deg);
+  z-index: 1;
+  pointer-events: none;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap::after {
+  width: 145%;
+  height: 30%;
+  top: 50%;
+  border-color: rgba(87, 180, 255, .72);
+  transform: translate(-50%, -50%) rotate(28deg);
+}
+body:not(.inner-page) main > .hero .hero-visual > .float-card {
+  z-index: 4 !important;
+}
+@media (max-width: 760px) {
+  body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+    width: min(108%, 440px) !important;
+  }
+}
