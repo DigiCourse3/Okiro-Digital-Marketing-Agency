@@ -5505,42 +5505,10 @@ body:not(.inner-page) main > .hero .hero-visual::after {
 }
 
 
-/* Homepage brand globe: place the transparent Okiro mark on the sphere.
-   The globe and logo rotate as one object while the existing float motion remains. */
+
+/* Keep the homepage globe in its original floating animation.
+   The transparent brand logo belongs on the Who We Are page, not the landing hero. */
 body:not(.inner-page) main > .hero .planet {
-  animation: float 7s ease-in-out infinite, okiro-planet-rotation 36s linear infinite !important;
-  transform-origin: 50% 50%;
-  will-change: rotate;
-}
-body:not(.inner-page) main > .hero .planet-logo {
-  position: absolute !important;
-  z-index: 5 !important;
-  left: 50% !important;
-  top: 50% !important;
-  display: block !important;
-  width: 62% !important;
-  max-width: 160px !important;
-  max-height: 92px !important;
-  height: auto !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  transform: translate(-50%, -50%) !important;
-  pointer-events: none !important;
-  filter: drop-shadow(0 2px 9px rgba(5, 8, 23, .35));
-}
-@keyframes okiro-planet-rotation {
-  from { rotate: 0deg; }
-  to { rotate: 360deg; }
-}
-@media (prefers-reduced-motion: reduce) {
-  body:not(.inner-page) main > .hero .planet {
-    animation: none !important;
-    rotate: 0deg !important;
-  }
+  animation: float 7s ease-in-out infinite !important;
+  rotate: 0deg !important;
 }
