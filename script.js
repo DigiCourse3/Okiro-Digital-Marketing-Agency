@@ -313,7 +313,29 @@ window.okiroSubmitLead = async function (form, feedback, source) {
 (function(){function addTrust(){var hero=document.querySelector('main > .hero');if(!hero||document.querySelector('.okiro-golden-trust'))return;var strip=document.createElement('section');strip.className='okiro-golden-trust';strip.setAttribute('aria-label','Okiro approach');strip.innerHTML='<div class="okiro-golden-trust__inner"><span>STRATEGY-LED CAMPAIGNS</span><span>PERFORMANCE-FOCUSED EXECUTION</span><span>CLEAR REPORTING</span><span>BUILT AROUND YOUR GOALS</span></div>';hero.insertAdjacentElement('afterend',strip);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',addTrust,{once:true});else addTrust();})();
 
 
-/* Globe rotation is handled by the existing 24-second wrapper animation in styles.css. */
+/* Keep the uploaded homepage globe rotating independently of legacy CSS transforms.
+   Rotate the wrapper's CSS rotate property so its translate positioning remains untouched. */
+(() => {
+  const startGlobeRotation = () => {
+    const globe = document.querySelector('main > .hero .hero-visual > .hero-globe-spin-wrap');
+    if (!globe || globe.dataset.okiroRotationStarted === 'true') return;
+    globe.dataset.okiroRotationStarted = 'true';
+    globe.style.setProperty('animation', 'none', 'important');
+    globe.style.setProperty('rotate', '0deg', 'important');
+    const duration = 24000;
+    const frame = (now) => {
+      const angle = ((now % duration) / duration) * 360;
+      globe.style.setProperty('rotate', angle + 'deg', 'important');
+      window.requestAnimationFrame(frame);
+    };
+    window.requestAnimationFrame(frame);
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', startGlobeRotation, { once: true });
+  } else {
+    startGlobeRotation();
+  }
+})();
 
 
 
