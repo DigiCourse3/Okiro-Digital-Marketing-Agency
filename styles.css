@@ -6287,3 +6287,17 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.he
   from { rotate: 0deg; }
   to { rotate: 360deg; }
 }
+
+
+/* Restore the original rotation target: rotate only the uploaded globe image.
+   Keep the wrapper stationary so the globe does not rotate twice. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  animation: none !important;
+  rotate: none !important;
+  transform: translate(-50%, -50%) !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
+  animation: none !important;
+  transition: none !important;
+  rotate: none !important;
+}
