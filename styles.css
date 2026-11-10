@@ -6269,14 +6269,14 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.he
 }
 
 
-/* 10 Nov 2026: final single-wrapper rotation fix. Keep the uploaded globe artwork and rotate the wrapper only. */
+/* 10 Nov 2026: rotate the globe with the independent CSS rotate property.
+   Keep the translate positioning transform unchanged. */
 body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  transform: translate(-50%, -50%) !important;
   animation: okiro-globe-final-spin 24s linear infinite !important;
   animation-play-state: running !important;
-  transform: translate(-50%, -50%) !important;
   transform-origin: 50% 50% !important;
-  rotate: none !important;
-  will-change: transform;
+  will-change: rotate;
 }
 body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
   animation: none !important;
@@ -6284,6 +6284,6 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.he
   rotate: none !important;
 }
 @keyframes okiro-globe-final-spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
 }
