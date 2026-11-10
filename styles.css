@@ -6267,3 +6267,23 @@ body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.he
   object-fit: contain !important;
   mix-blend-mode: normal !important;
 }
+
+
+/* 10 Nov 2026: final single-wrapper rotation fix. Keep the uploaded globe artwork and rotate the wrapper only. */
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap {
+  animation: okiro-globe-final-spin 24s linear infinite !important;
+  animation-play-state: running !important;
+  transform: translate(-50%, -50%) !important;
+  transform-origin: 50% 50% !important;
+  rotate: none !important;
+  will-change: transform;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
+  animation: none !important;
+  transform: none !important;
+  rotate: none !important;
+}
+@keyframes okiro-globe-final-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
