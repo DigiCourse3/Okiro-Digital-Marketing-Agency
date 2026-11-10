@@ -6243,3 +6243,27 @@ body:not(.inner-page) main > .marquee-band .marquee-track {
     padding: 14px 0 !important;
   }
 }
+
+
+/* Homepage globe cleanup: show only the user's uploaded transparent globe artwork.
+   Remove the legacy CSS planet, orbital overlays and the duplicate WebGL canvas. */
+body:not(.inner-page) main > .hero .hero-visual > .visual-grid,
+body:not(.inner-page) main > .hero .hero-visual > .orbit,
+body:not(.inner-page) main > .hero .hero-visual > .planet,
+body:not(.inner-page) main > .hero .hero-visual .okiro-earth-3d {
+  display: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap::before,
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap::after {
+  content: none !important;
+  display: none !important;
+}
+body:not(.inner-page) main > .hero .hero-visual > .hero-globe-spin-wrap > img.hero-globe-art {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  mix-blend-mode: normal !important;
+}
